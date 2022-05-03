@@ -1,0 +1,17 @@
+# Fdb version 3
+["pdflatex"] 1651611693 "Decomposition.tex" "building_docs/Decomposition.pdf" "Decomposition" 1651611694
+  "/etc/texmf/web2c/texmf.cnf" 1627043060 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1581979058 38841 ce3692aa899bb693b90b87eaa5d4d84e ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1627043168 128067 403859e4d35fdff4c458758f0e5ea400 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1627043173 4810232 e8fd2d6cd23bc2a6bd29ed8eb6a95df1 ""
+  "BanachTarski/espace3dim.tex" 0 -1 0 ""
+  "Decomposition.tex" 1651611693 15093 011997ac42da19f4f464ccc6aefb47c0 ""
+  "building_docs/BanachTarski/espace3dim.tex" 0 -1 0 ""
+  "building_docs/Decomposition.aux" 1651611693 8 a94a2480d3289e625eea47cd1b285758 ""
+  (generated)
+  "building_docs/Decomposition.log"
+  "building_docs/Decomposition.pdf"
