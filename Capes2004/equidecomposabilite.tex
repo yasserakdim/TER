@@ -1,0 +1,131 @@
+\section{Équidécomposabilité.}\label{ed}
+\noindent
+Soient $\mathrm{A}$ et $\mathrm{B}$ deux parties non vides de  $\mathrm{E}$. On dit que $\mathrm{A}$ est équidécomposable à $\mathrm{B}$ s'il éxiste une partition finie $(A_i)_{i\in I}$ de $\mathrm{A}$ et $(B_i)_{i\in I}$ partition finie de $\mathrm{B}$, et une famille finie $(g_i)_{i\in I}$ de déplacements de $\mathrm{E}$ (c.à.d des isométries affines positives) telles que :$$\forall i \in I, B_i = g_i(A_i)$$
+On écrira alors $\mathrm{A} \sim \mathrm{B}$.\par
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prop}\label{prop8}
+  La sphère $\mathrm{S}^2$ est équidécomposable à $\mathrm{X}$.
+\end{prop}
+\noindent
+Pour démontrer la proposition on va procéder le la manière suivante.
+\begin{itemize}
+  \item On va creer un ensemble symétrique par rapport à l'origine et strictement inclu dans $\mathrm{S}^2$.
+  \item Puis, on va construire une rotation, $r$, d'axe qui passe par deux éléments de cet ensemble (c'est pour ça qu'on a besoin de la symétrie), et on va montrer que $\forall u,v \in F$ et $\forall m,n \in \mathbb{N}^*$, on a $r^n(u) \ne r^m(v)$.
+  \item En fin, on va considèrer cette rotation pour construire $X$ à partir de parties incluses dans $S^2$.
+\end{itemize}
+\begin{lemma}\label{lemme15}
+  \hfill
+
+  On note $\Lambda = \{ (u, v) \in F\times F \mid u\neq v\}$, et pour $(u, v) \in \Lambda$, on note $\Gamma_{u, v} = \{ w \in \mathrm{S}^2 \mid \norme{w-u} = \norme{w-v}\}$. $\Gamma_{u, v}$ est un cercle centré à l'origine.
+\end{lemma}
+\begin{proof}
+  \hfill
+
+  Soient $(u, v) \in \Lambda$ :
+  \begin{align*}
+    w \in \Gamma_{u, v} &\Leftrightarrow \norme{w-u}^2 = \norme{w-v}^2\\
+    &\Leftrightarrow  \langle w-u, w-u \rangle = \langle w-v, w-v \rangle\\
+    &\Leftrightarrow \langle w, u-v \rangle = 0.
+  \end{align*}\par
+  Donc $\Gamma_{u, v}$ est le cercle d'intersection du plan médiateur du segment $[u, v]$, et la sphere unitée.
+\end{proof}
+\begin{lemma}\label{lemme16}
+  \hfill
+
+    Soit $\Gamma = \underset{(u,v)\in \Lambda}{\bigcup}\Gamma_{u, v}$. L'ensemble $\Gamma \cup F$ est symétrique par rapport à l'origine, et strictement inclu dans $\mathrm{S}^2$.
+\end{lemma}
+\begin{proof}
+  \hfill
+
+  Puisque $\mathrm{F}$ est dénombrable, alors $\Lambda$ est dénombrable.\par
+  On a $\Gamma$ et $F$ sont symétrique par rapport à l'origine, puisque $\Gamma$ est une réunion de cercles centrés à l'origine,\par et $F$ vérifie : $$v \in F \Leftrightarrow \exists g \in \mathrm{G}-\mathrm{Id_E}, g(v)=v$$\par et donc $g(-v)=-v$,
+  alors $\Gamma \cup F$ est symétrique par rapport à l'origine.\par
+  De plus pour un cercle $C$ dans $\mathrm{S}^2$ non centré à l'origine on a : $$\left(\Gamma \cup F\right) \cap C=\left(\Gamma\cap C\right)\cup \left(F\cap C\right)= \left(\underset{\left(u,v\right)\in \Lambda}{\bigcup}\Gamma_{u, v}\cap C\right) \cup \left(F\cap C\right)$$\par
+  Et on sait que $F$ est dénombrable donc $F\cap C$ l'est aussi, de plus $\Gamma_{u, v}\cap C$ contient au plus deux éléments, \par et $\Lambda$ est dénombrable alors on conclut que $(\Gamma \cup F)\cap C$ est dénombrable, et donc $\mathrm{S}^2 \ne \Gamma \cup F$ car $\mathrm{S}^2\cap C = C$\par n'est pas dénombrable.\par
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{lemma}\label{lemme17}
+  \hfill
+
+  Il existe un élément $r$ de $\mathcal{SO}(E)$ dont l'axe ne rencontre pas $\Gamma \cup F$ et tel que $\forall p \in \mathbb{Z}^*, r^p \neq \mathrm{Id_E}$, et qui vérifie donc : $\forall n\neq m, r^n(F)\cap r^m(F) = \emptyset$.
+\end{lemma}
+\begin{proof}
+  \hfill
+  \begin{itemize}
+  \item On sait que $\mathrm{S}^2 \ne \Gamma\cup F$ alors $\exists x \in \mathrm{S}^2$ tel que $x \not \in \Gamma\cup F$, et par symétrie, $-x \not \in \Gamma\cup F$. On prend l'axe vectoriel $D$ qui passe par le centre et le point $x$, alors $D$ rencontre la sphere en $x$ et $-x$ et donc ne rencontre pas $\Gamma\cup F$.
+  Pour qu'une rotation $r$ d'angle $2\pi\alpha$ de $\mathcal{SO}(3)$ vérifie
+  $\forall p \in \mathbb{Z}^*, r^p \neq \mathrm{Id_E}$, il faut que $2 \pi \alpha p \neq 2 \pi k, \forall k \in \mathbb{Z}$ càd il faut que $\alpha$ soit irrationnel, et donc on a construit une rotation dont l'axe ne rencontre pas $\Gamma \cup F$ et tel que  $$\forall p \in \mathbb{Z}^*, r^p \neq \mathrm{Id_E}$$
+  \item Soit $(u, v)$ dans $F \times F$, montrons que $\forall k > 0, r^k(u) \ne v$ :
+  \par Si $u=v$, alors si $\exists k > 0, r^k(u)=u$ donc $u \not \in F$ par définition de $F$, et donc $\forall k >0, r^k(u)\neq u$.
+  \par Si $u\neq v$, alors si $\exists k > 0, r^k(u)=v$, donc puisque $r^k$ est une rotation d'axe $D$, $\langle r^k(u), x \rangle = \langle u, x \rangle$, càd \par $\langle v-u, x \rangle = 0$, et donc $x \in \Gamma_{u, v}$ ce qui est impossible car $x \not \in \Gamma \cup F$.\par
+  Donc $\forall n\neq m, r^n(F)\cap r^m(F) = \emptyset$, car sinon $$\exists (u,v) \in F \times F, r^n(u)=r^m(v)$$ càd si $n>m$, $r^{n-m}(u)=v$ ce qui est absurde.\par
+\end{itemize} \end{proof}
+\begin{definition}
+  Soit $r$ une rotation de $\mathcal{SO}(E)$, qui vérifie les hypotèses du \hyperref[lemme17]{Lemme 14}.
+\end{definition}
+Passant maintenant à la démonstration de la \hyperref[prop8]{Proposition 7}.
+\begin{proof}[Démonstration de la Proposition 7]
+  \hfill
+  \begin{itemize}
+    \item   On pose : $$Y = \underset{n\in \mathbb{N}}{\bigcup}r^n(F), \text{ et } Z = \mathrm{S}^2-Y$$
+      Il est clair que $r(Y) = r(\underset{n\in \mathbb{N}}{\bigcup}r^n(F))=\underset{n\in \mathbb{N}^*}{\bigcup}r^n(F) \subset(Y)$ donc $r(Y) \cap Z = \emptyset$. De plus on a :
+      $$F \subset Y, \text{ donc } \mathrm{S}^2-Y \subset \mathrm{S}^2-F=\mathrm{X}, \text{ et pour $n>0$, } r^n(F) \cap F = \emptyset \text{ alors } r(Y) \cup Z \subset \mathrm{S}^2-F=\mathrm{X}$$\par
+      Et donc : $$ \mathrm{S}^2=Y\cup Z =F\cup r(Y) \cup Z \Rightarrow \mathrm{X}=\mathrm{S}^2-F = r(Y)\cup Z$$\par D'où:
+      $$r(Y) \cap Z = \emptyset \text{ et }\mathrm{X}= r(Y)\cup Z$$
+    \item  Il suffit donc de prendre $A_1=\mathrm{Y}, B_1=\mathrm{r(Y)} , g_1=r$ et $A_2=\mathrm{Z}, B_2=\mathrm{Z} , g_2=\mathrm{Id_E}$, pour conclure que $\mathrm{S}^2$ est équidécomposable à $\mathrm{X}$.\par
+
+  \end{itemize}
+\end{proof}
+
+\begin{prop}\label{prop9}
+  \hfill
+
+  Si $A_1$, $A_2$, $B_1$, $B_2$ sont des sous-ensembles non vides de $E$ tels que :
+  $$A_1\cap A_2=B_1 \cap B_2 = \emptyset, A_1 \sim B_1, A_2 \sim B_2$$\par
+  Alors : $$A_1 \cup A_2 \sim B_1 \cup B_2$$\par
+  Et le résulat se généralise; si $(A_i)_{i\in I}$ et $(B_i)_{i\in I}$ avec $I$ fini sont deux familles d'éléments non vides de $\mathrm{E}$ tels \par que les $(A_i)_{i\in I}$ sont disjoints deux à deux, et $(B_i)_{i\in I}$ sont disjoints deux à deux, et $A_i \sim B_i, \forall i \in I$, alors : $$\underset{i \in I}{\bigcup} A_i \sim \underset{i \in I}{\bigcup} B_i$$ \par
+\end{prop}
+\begin{proof}
+  \hfill
+
+  Puisque $A_1 \sim B_1$ et $A_2 \sim B_2$, alors $\exists I, J$ et des partitions finies de $A_1$, $A_2$, $B_1$, $B_2$ :
+  $((A_{1_i})_{i \in I})$, $((B_{1_i})_{i \in I})$, \par $((A_{2_j})_{j \in J})$, $((B_{2_j})_{j \in J})$ et des familles finies de déplacements $(g_i)_{i\in I}$ et $(g_j)_{j \in J}$ tels que :$$\forall (i,j) \in I\times J, B_{1_i} = g_i(A_{1_i}), B_{2_j} = g_i(A_{2_j})$$\par
+  Et puisque $(A_1, A_2)$ est une partition de $A_1\cup A_2$, et $(B_1, B_2)$ est une partition de $B_1\cup B_2$,\par alors
+  $(A_{1_i} \cup A_{2_j})_{i \in I, j \in J}$ et $(B_{1_i}\cup B_{2_j})_{i \in I, j \in J}$ sont des partitions de  $A_1\cup A_2$, et $B_1\cup B_2$ et $(g_i, g_j)_{i \in I, j \in J}$ \par est une famille finie de déplacements, qui vérifient les conditions de d'équidécomposabilité, donc : $$A_1 \cup A_2 \sim B_1 \cup B_2$$ \par
+  Le résultat se généralise facilement pour toute collection de famille finies de sous ensembles non vides et disjoints de $\mathrm{E}$.
+\end{proof}
+\begin{lemma}\label{lemme18}
+  La relation $\sim$ est une relation d'équivalence sur $\mathcal{P}(\mathrm{E})-{\emptyset}$.
+\end{lemma}
+
+\begin{proof}
+  \hfill
+  \begin{itemize}
+    \item réflexive : $A$ est une partition de $A$ et $A=\mathrm{Id_E}(A)$ donc $A\sim A$.
+    \item symétrique : Si $A \sim B$ alors $\exists (A_i), (B_i), (g_i) \text{ tels que } B_i=g_i(A_i)$ et donc $A_i=g_i^{-1}(B_i)$ d'où  $B \sim A$.
+    \item transitive : si $A \sim B$ et $B \sim C$ alors $\exists I, J$ ensembles finis, $\exists (A_i)_{i \in I}, (B_i)_{i \in I}, (g_i)_{i \in I}$  tels que :\\ $B_i=g_i(A_i), \forall i \in I$, et $\exists (B_j)_{j \in J}, (C_j)_{j \in J}, (g_j)_{j \in J}$  tels que : $C_j=g_j(B_i), \forall j \in J$.\\
+    Donc si on considère l'ensemble $K=\{ (i,j) \in I \times J \mid B_i\cap B_j\neq \emptyset \}$ et on prend la partition $(B_i\cap B_j)_{(i,j)\in K}$ de $B$, de plus $(g_i^{-1}(B_i\cap B_j))_{(i,j)\in K}$ et $(g_j^{-1}(B_i\cap B_j))_{(i,j)\in K}$ sont des partitions de $A$ et de $C$ respectivement, et $g_i^{-1} \circ g_j(g_j^{-1}(B_i\cap B_j)) = g_i^{-1}(B_i\cap B_j)$ et donc $A \sim C$.
+  \end{itemize}
+\end{proof}
+
+\begin{prop}\label{prop10}
+  \hfill
+
+  Si $A \sim B$ alors il existe une bijection $\psi$ de $A$ dans $B$ tel que pour tout sous-ensemble non vide $C$ de $E$ on a que $C \sim \psi(C)$.
+\end{prop}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{proof}
+  \hfill
+
+\noindent
+  On suppose que $A \sim B$, et on pose :
+  \begin{align*}
+  \psi \colon A &\to B\\
+  x &\mapsto g_i(x), \text{ avec $i$ tel que $x \in A_i$}.
+  \end{align*}
+  Puisque $\forall i \in I, B_i = g_i(A_i)$ alors la fonction est clairement surjective, de plus si $\psi(x)= \psi (y)$, alors $\exists i, j$ tel  que $g_i(x)=g_j(y)$, si $i\ne j$ alors $g_i(x) \in B_i$ et $g_j(y) \in B_j$ et $B_i \cap B_j = \emptyset$ donc $g_i(x)\neq g_j(y)$ et donc $i=j$.\\ Par injectivité de $g_i$ on conclut que $x=y$, et alors $\psi$ est injective, donc bijective.
+  Pour tout sous-ensemble $C$ de $A$, la collection $(C\cap A_i)_{i \in I}$ est une partition de $C$ et $(\psi(C) \cap B_i)_{i \in I}$ est une partition de $\psi(C)$. Nous avons par ailleurs que $g_i(C\cap A_i)= g_i(C)\cap B_i= \psi(C\cap A_i)=\psi(C)\cap B_i$ et donc $C \sim \psi(C)$.
+\end{proof}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

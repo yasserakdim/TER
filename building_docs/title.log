@@ -1,0 +1,339 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.23)  3 MAY 2022 22:31
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**title.tex
+(./title.tex
+LaTeX2e <2020-02-02> patch level 2
+L3 programming layer <2020-02-14>
+
+./title.tex:2: LaTeX Error: Environment titlepage undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 \begin{titlepage}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+./title.tex:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \begin{center}
+                  
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--3
+[] 
+ []
+
+./title.tex:7: Undefined control sequence.
+l.7 \includegraphics
+                    [width=0.4\textwidth]{./images/UFR_IM2AG_2020.jpg}~\\[1cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no = in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 4 in font nullfont!
+./title.tex:7: Missing number, treated as zero.
+<to be read again> 
+                   ]
+l.7 \includegraphics[width=0.4\textwidth]
+                                         {./images/UFR_IM2AG_2020.jpg}~\\[1cm]
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+./title.tex:7: Illegal unit of measure (pt inserted).
+<to be read again> 
+                   ]
+l.7 \includegraphics[width=0.4\textwidth]
+                                         {./images/UFR_IM2AG_2020.jpg}~\\[1cm]
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no U in font nullfont!
+Missing character: There is no F in font nullfont!
+Missing character: There is no R in font nullfont!
+./title.tex:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7 ...graphics[width=0.4\textwidth]{./images/UFR_
+                                                  IM2AG_2020.jpg}~\\[1cm]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 7.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 7.
+./title.tex:7: Extra }, or forgotten $.
+l.7 ...0.4\textwidth]{./images/UFR_IM2AG_2020.jpg}
+                                                  ~\\[1cm]
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+./title.tex:7: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...\textwidth]{./images/UFR_IM2AG_2020.jpg}~\\
+                                                  [1cm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./title.tex:7: Missing $ inserted.
+<inserted text> 
+                $
+l.7 ...\textwidth]{./images/UFR_IM2AG_2020.jpg}~\\
+                                                  [1cm]
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./title.tex:7: Missing } inserted.
+<inserted text> 
+                }
+l.7 ...\textwidth]{./images/UFR_IM2AG_2020.jpg}~\\
+                                                  [1cm]
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (72.85655pt too wide) in paragraph at lines 7--7
+ []\OML/cmm/m/it/10 M\OT1/cmr/m/n/10 2\OML/cmm/m/it/10 AG[]\OT1/cmr/m/n/10 020\OML/cmm/m/it/10 :jpg [][]$ 
+ []
+
+./title.tex:11: Undefined control sequence.
+<recently read> \Large 
+                       
+l.11 \textsc{\Large }
+                     \\[1cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./title.tex:14: Undefined control sequence.
+l.14 \HRule
+            \\[0.8cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./title.tex:14: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.14 \HRule \\
+              [0.8cm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./title.tex:16: Undefined control sequence.
+l.16 {\huge
+            \bfseries TER\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (24.18042pt too wide) in paragraph at lines 16--16
+ []\OT1/cmr/bx/n/10 TER 
+ []
+
+
+Overfull \hbox (46.61778pt too wide) in paragraph at lines 17--17
+ []\OT1/cmr/bx/n/10 Paradoxe 
+ []
+
+
+Overfull \hbox (11.65967pt too wide) in paragraph at lines 17--17
+ \OT1/cmr/bx/n/10 de 
+ []
+
+
+Overfull \hbox (40.76363pt too wide) in paragraph at lines 17--17
+ \OT1/cmr/bx/n/10 Banach- 
+ []
+
+
+Overfull \hbox (31.16786pt too wide) in paragraph at lines 17--17
+ \OT1/cmr/bx/n/10 Tarski 
+ []
+
+./title.tex:19: Undefined control sequence.
+l.19 \HRule
+            \\[1.5cm]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./title.tex:19: LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \HRule \\
+              [1.5cm]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+./title.tex:23: Undefined control sequence.
+l.23 \begin{flushleft} \large
+                             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (33.69836pt too wide) in paragraph at lines 24--24
+\OT1/cmr/m/it/10 Auteur:  
+ []
+
+
+Overfull \hbox (31.2276pt too wide) in paragraph at lines 25--25
+[]\OT1/cmr/m/sc/10 Akdim 
+ []
+
+
+Overfull \hbox (34.15259pt too wide) in paragraph at lines 25--25
+\OT1/cmr/m/sc/10 Yasser  
+ []
+
+./title.tex:30: Undefined control sequence.
+l.30 \begin{flushright} \large
+                              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (52.72601pt too wide) in paragraph at lines 31--31
+ \OT1/cmr/m/it/10 Encadrante:
+ []
+
+
+Overfull \hbox (44.68861pt too wide) in paragraph at lines 32--32
+ []\OT1/cmr/m/sc/10 Maclean
+ []
+
+
+Overfull \hbox (32.06088pt too wide) in paragraph at lines 32--32
+ \OT1/cmr/m/sc/10 Catri-
+ []
+
+
+Overfull \hbox (18.62216pt too wide) in paragraph at lines 32--32
+ \OT1/cmr/m/sc/10 ona
+ []
+
+./title.tex:40: Undefined control sequence.
+l.40 {\large
+             \today}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+./title.tex:40: Undefined control sequence.
+l.40 {\large \today
+                   }
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+./title.tex:43: LaTeX Error: \begin{document} ended by \end{titlepage}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.43 \end{titlepage}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+)
+! Emergency stop.
+<*> title.tex
+             
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 28 strings out of 483154
+ 531 string characters out of 5965023
+ 232698 words of memory out of 5000000
+ 15151 multiletter control sequences out of 15000+600000
+ 533293 words of font info for 27 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 18i,3n,15p,102b,210s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!

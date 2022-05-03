@@ -1,0 +1,294 @@
+\section{Construction d'un sous-groupe libre de rang $2$ de $\mathcal{SO}(3)$ :}
+\noindent
+Dans ce qui suit on pose $\alpha=\arccos(\frac{3}{5})$.
+$\mathrm{I}_3$, $\mathrm{R}$ et $\mathrm{T}$ seront les matrices de $\mathcal{SO}(3)$ définies par :
+\[
+\mathrm{I}_3=
+\begin{pmatrix}
+1 & 0 & 0\\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{pmatrix}
+,
+\mathrm{R}=
+\begin{pmatrix}
+ \cos(\alpha) & -\sin(\alpha) & 0\\
+ \sin(\alpha) & \cos(\alpha) & 0 \\
+ 0 & 0 & 1
+\end{pmatrix}
+\text{ et }
+\mathrm{T}=
+\begin{pmatrix}
+   1 & 0 & 0 \\
+ 0 &\cos(\alpha) & -\sin(\alpha) \\
+ 0 & \sin(\alpha) & \cos(\alpha)
+\end{pmatrix}
+\]
+Soient $\rho$ et $\tau$ les rotations de $\mathrm{E}$ de matrices $\mathrm{R}$ et $\mathrm{T}$ dans la base $\mathcal{B}=(e_1, e_2, e_3)$, donc ils sont respectivement des rotations d'axes engendrés par $e_3$ et $e_1$, et d'angle $\alpha$.
+\begin{remarkk}
+$\mathbb{G}=\langle \mathrm{R},\mathrm{T} \rangle \subset \mathcal{SO}(3)$ et $\mathrm{G}=\langle \mathrm{\rho},\mathrm{\tau} \rangle \subset \mathcal{SO}(\mathrm{E})$ sont isomorphes, via l'application qui associe un élément de $\mathrm{G}$ sa matrice dans une base orthonormée.
+\end{remarkk}
+
+% \begin{prop}\label{prop3}
+%   Le groupe $\mathbb{G}=\langle \mathrm{R},\mathrm{T} \rangle$ est libre, (et donc $\mathrm{G}$ l'est aussi).
+% \end{prop}
+\noindent
+Dans la suite on pose :
+$$ \forall n \in \mathbb{Z}, a_n = 5^{\mid n \mid}\cos(n\alpha) \text{ et } b_n = 5^{\mid n \mid}\sin(n\alpha)$$
+Et on considère la relation $\equiv$ définie sur $\mathcal{M}_3(\mathbb{Z})$ par : $$\mathrm{M} \equiv \mathrm{M}' \Leftrightarrow \forall (i, j) \in [1, 3]^2, \mathrm{M}[i, j] \equiv_\mathbb{Z} \mathrm{M}'[i, j] \pmod 5$$
+Où $a \equiv_\mathbb{Z} b \pmod n$ signifie $n$ divise $b-a$.
+
+\begin{lemma}\label{lemme3}
+Pour tout $n \in \mathbb{Z}$, on a que $a_n$ et $b_n$ sont dans $\mathbb{Z}$ et :
+$$\forall n \ne 0, a_n \equiv_\mathbb{Z} 3 \pmod 5 \text{, } \forall n \ge 1, b_n \equiv_\mathbb{Z} 4 \pmod 5 \text{ et } \forall n \le -1, b_n \equiv_\mathbb{Z} 1 \pmod 5$$\par
+\end{lemma}
+
+\begin{proof}
+  \hfill
+  \begin{itemize}
+    \item On commence tout d'abord par montrer que les $a_n$ et les $b_n$ sont dans $\mathbb{Z}$. On a $\cos\left(\left(n+1\right)\alpha\right) + \cos\left(\left(n-1\right)\alpha\right) = \frac{6}{5}\cos\left(n\alpha\right)$,
+  donc : $$\forall n \ge 1, a_{n+1} = 5^{ n+1 }\cos\left(\left(n+1\right)\alpha\right) = 5^{ n+1 }\left(\frac{6}{5}\cos\left(n\alpha\right)-\cos\left(\left(n-1\right)\alpha\right)\right)= 6a_n-25a_{n-1}$$\par
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  De plus on a $\cos\left(\alpha\right) = \frac{3}{5}$ et puisque $\alpha \in [0, \pi]$ alors $0 \le \sin\left(\alpha\right) = \sqrt{1-\cos^2\left(\alpha\right)} = \frac{4}{5}$ donc
+  $$\forall n \ge 0, b_{n+1}=5^{n+1 }\sin\left(\left(n+1\right)\alpha\right)=5^{n+1 }\left(\sin\left(n\alpha\right)\cos\left(\alpha\right)+\sin\left(\alpha\right)\cos\left(n\alpha\right)\right) = 3b_n +4a_n$$\par
+  Il suit que pour les entiers naturels on peut montrer par récurrence que $a_n$ et $b_n$ sont des entiers relatifs.\par Pour les entiers relatifs négatifs, il suffit de remarquer que $a_n = a_{-n}$ et que $b_n = - b_{-n}$, et donc on conclut que pour tout $n$, $a_n$ et $b_n$ sont des entiers relatifs.\\
+
+
+  \item On montre maintenant l'autre partie du lemme \\
+  On a $a_1=3\equiv_\mathbb{Z} 3 \pmod 5$ donc par recurrence,  $\forall n \ge 1, a_{n+1} = 6a_n - 25a_{n-1} \equiv_\mathbb{Z} 6\times3 - 25\times3 \equiv_\mathbb{Z} 3 \pmod 5$ Pour $n \le 1$, il suffit de remarquer que $a_n = a_{-n}$ et donc  $$\forall n \ne 0, a_n \equiv_\mathbb{Z} 3 \pmod 5$$\par
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Par ailleurs, $b_1=4\equiv_\mathbb{Z} 4 \pmod 5$ donc par recurrence,  $\forall n \ge 1,b_{n+1}=3b_n+4a_n\equiv_\mathbb{Z} 12+12 \equiv_\mathbb{Z} 4 \pmod 5$\\
+  et on a $b_{n}=-b_{-n} \equiv_\mathbb{Z} -4 \equiv_\mathbb{Z} 1 \pmod 5$, donc :$$\forall n \ge 1, b_n \equiv_\mathbb{Z} 4 \pmod 5, \forall n \le -1, b_n \equiv_\mathbb{Z} 1 \pmod 5$$\par
+\end{itemize}
+\end{proof}
+\begin{lemma}\label{lemme4}
+  La relation $\equiv$ est une relation d'équivalence sur $\mathcal{M}_3(\mathbb{Z})$, compatible avec le produit.
+\end{lemma}
+\begin{proof}
+  \hfill
+
+Il est clair que $\equiv$ est une relation d'équivalence, soient donc $A, B, C, D \in \mathcal{M}_3(\mathbb{Z})$ tels que $A \equiv B$ et $C \equiv D$\par Alors : $$AC_{i,j}=\sum_{k=1}^3 a_{i,k}c_{k,j} \equiv_\mathbb{Z} \sum_{k=1}^3 b_{i,k}d_{k,j} \pmod 5 \equiv_\mathbb{Z} BD_{i,j} \pmod 5$$\par
+ car la congruence des entiers est compatible avec la somme et le produit.\par
+\end{proof}
+\noindent
+On va s'appuyer sur les lemmes qui suivent pour montrer que $T$ et $R$ sont indépendants.
+On commence tout d'abord par montrer que $T$ et $R$ sont d'ordre infini.
+\begin{lemma}\label{lemme5}
+  On a $\forall k \in \mathbb{Z}, 5^{\mid k \mid}R^k, 5^{\mid k \mid}T^k \in \mathcal{M}_3(\mathbb{Z})$ et :
+  \[
+  \forall k \in \mathbb{Z},
+  5^{\mid k \mid}R^{k} \equiv \begin{pmatrix}
+     3 & \epsilon_k & 0 \\
+   -\epsilon_k & 3 & 0 \\
+   0 & 0 & 0
+  \end{pmatrix}
+  \text{ et }
+  5^{\mid k \mid}T^{k} \equiv \begin{pmatrix}
+     0 & 0 & 0 \\
+    0 & 3 & \epsilon_k \\
+   0 & -\epsilon_k & 3
+  \end{pmatrix}
+  \text{ où $\epsilon_k = 1$ si $k>0$ et $\epsilon_k = -1$ si $k<0$}
+  \]\par
+  De plus $\forall k \in \mathbb{Z}^*, R^k, T^k \ne I_3$.
+\end{lemma}
+\begin{proof}
+  \hfill
+
+  On a $5^0R^0=I_3$ et pour $k>0$ on vérifie simplement que : $$5^kR^k = \begin{pmatrix}
+     a_k & -b_k & 0 \\
+   b_k & a_k & 0 \\
+   0 & 0 & 1
+  \end{pmatrix} \in \mathcal{M}_3(\mathbb{Z})$$\par
+  Pour $k<0$ on a que $$5^{-k}R^{- \mid k \mid} = \begin{pmatrix}
+     a_{-k} & b_{-k} & 0 \\
+   -b_{-k} & a_{-k} & 0 \\
+   0 & 0 & 1
+  \end{pmatrix} \in \mathcal{M}_3(\mathbb{Z})$$\par
+  On procède de la même manière pour $T$ et on conclut que : $$\forall k \in \mathbb{Z}, 5^{\mid k \mid}R^k, 5^{\mid k \mid}T^k \in \mathcal{M}_3(\mathbb{Z})$$\par Et donc en utilisant le  \hyperref[lemme3]{Lemme 2}
+  \[
+  \forall k \in \mathbb{Z},
+  5^{\mid k \mid}R^{k} \equiv \begin{pmatrix}
+     3 & \epsilon_k & 0 \\
+   -\epsilon_k & 3 & 0 \\
+   0 & 0 & 0
+  \end{pmatrix}
+  \text{ et }
+  5^{\mid k \mid}T^{k} \equiv \begin{pmatrix}
+     0 & 0 & 0 \\
+    0 & 3 & \epsilon_k \\
+   0 & -\epsilon_k & 3
+  \end{pmatrix}
+  \text{ où $\epsilon_k = 1$ si $k>0$ et $\epsilon_k = -1$ si $k<0$}
+  \]\par
+  De plus, si $\exists k \ne 0 $ tel que $R^k=I_3$ alors $5^{\mid k \mid}R^{k} \equiv 0_{\mathcal{M}_3(\mathbb{Z})}$ ce qui est impossible, et de même pour $T$.
+\end{proof}
+% \begin{lemma}
+% $\forall k \in \mathbb{Z}^*, R^k, T^k \ne I_3$.
+% \end{lemma}
+% \begin{proof}
+%   \hfill
+%
+% Si $\exists k \ne 0 $ tel que $R^k=I_3$ alors $5^{\mid k \mid}R^{k} \equiv 0_{\mathcal{M}_3(\mathbb{Z})}$ ce qui est impossible, et on raisonne de même pour $T$.
+% \end{proof}
+\noindent
+On va montrer maintenant que les éléments $R$ et $T$ sont indépendants, et pour cela on va donner un lemme qui va nous aider dans la démonstration.
+\begin{lemma}\label{lemme7}
+  Soient $(a_1,..,a_n), (b_1,..,b_n) \in \mathbb{Z}^{*n}$, et posons $q=\sum_{i=1}^n(\mid a_i\mid + \mid b_i \mid)$ nous avons alors que
+  $$5^qT^{a_1}R^{b_1}...T^{a_n}R^{b_n} \equiv  \begin{pmatrix} 0 & 0 & 0 \\ a & b & 0 \\
+ c  & d & 0 \end{pmatrix}, a,b,c,d \not \equiv_\mathbb{Z} 0 \pmod 5$$
+\end{lemma}
+\begin{proof}
+  \hfill
+
+  On raisonne par récurrence. Pour $n = 1$, par les lemmes \hyperref[lemme4]{3} et \hyperref[lemme5]{ 4} on a que
+  $$\forall (a_1,b_1)\in \mathbb{Z}^*, 5^{\mid a_1 \mid + \mid b_1 \mid}T^{a_1}R^{b_1}
+  \equiv
+  \begin{pmatrix}
+     0 & 0 & 0 \\
+    0 & 3 & \epsilon_{a_1} \\
+   0 & -\epsilon_{a_1} & 3
+  \end{pmatrix}
+  \begin{pmatrix}
+     3 & \epsilon_{b_1} & 0 \\
+   -\epsilon_{b_1} & 3 & 0 \\
+   0 & 0 & 0
+  \end{pmatrix}
+  \equiv
+  \begin{pmatrix}
+     0 & 0 & 0 \\
+   2\epsilon_{a_1} & 4 & 0 \\
+  \epsilon_{a_1}\epsilon_{b_1}  & 2\epsilon_{b_1} & 0
+  \end{pmatrix}
+   $$\par
+  où $2\epsilon_{a_1}$, $4$, $\epsilon_{a_1}\epsilon_{b_1} $ et $2\epsilon_{b_1}$ ne sont pas congru à $0$ modulo $5$.\par
+  Donc par récurrence : Soit $n \ge 1$ et supponsons que  $$\forall (a_1,..,a_n), (b_1,..,b_n) \in \mathbb{Z}^{*n}, 5^qT^{a_1}R^{b_1}...T^{a_n}R^{b_n} \equiv  \begin{pmatrix} 0 & 0 & 0 \\ a & b & 0 \\
+  c  & d & 0 \end{pmatrix}$$\par
+  où $q=\sum_{i=1}^n(\mid a_i\mid + \mid b_i \mid)$ et $a$, $b$, $c$ et $d$ ne sont pas congru à $0$ modulo $5$. Il en découle que
+  $$5^qT^{a_1}R^{b_1}...T^{a_n}R^{b_n}5^{\mid a_{n+1} \mid + \mid b_{n+1} \mid}T^ a_{n+1} R^ b_{n+1}\equiv
+  \begin{pmatrix}
+    0 & 0 & 0 \\
+     a & b & 0 \\
+  c  & d & 0
+  \end{pmatrix}
+  .
+  \begin{pmatrix}
+     0 & 0 & 0 \\
+   2\epsilon_{b_{n+1}} & 4 & 0 \\
+  \epsilon_{b_{n+1}}\epsilon_{a_{n+1}}  & 2\epsilon_{a_{n+1}} & 0
+  \end{pmatrix}
+  \equiv
+  \begin{pmatrix}
+    0 & 0 & 0 \\
+     2b\epsilon_{b_{n+1}} & 4b & 0 \\
+  2d\epsilon_{b_{n+1}}  & 4d & 0
+  \end{pmatrix}
+  $$\par
+  où $2b\epsilon_{b_{n+1}}$, $4b$, $2d\epsilon_{b_{n+1}}$, $4d$ ne sont pas congrus à $0$ modulo $5$.
+\end{proof}
+\noindent
+Maintenant, on a tous ce qu'il nous faut pour montrer que les éléments $R$ et $T$ sont indépendants, ce qui est équivalent au lemme suivant.
+\begin{lemma}\label{lemme8}
+  On a $\forall n \ge 1,\forall (a_1,..,a_n), (b_1,..,b_n) \in \mathbb{Z}^{*n}, \beta \in \mathbb{Z}$ :
+  \begin{align*}
+    T^{a_1}R^{b_1}...T^{a_n}R^{b_n}  \ne \mathrm{I}_3\\
+    T^{a_1}R^{b_1}...T^{a_n}R^{b_n}T^\beta \ne \mathrm{I}_3\\
+    R^{a_1}T^{b_1}...R^{a_n}T^{b_n}  \ne \mathrm{I}_3\\
+    R^{a_1}T^{b_1}...R^{a_n}T^{b_n}R^\beta \ne \mathrm{I}_3
+  \end{align*}
+\end{lemma}
+\begin{proof}
+\hfill
+
+Si $\exists n \ge 1,\exists (a_1,..,a_n), (b_1,..,b_n) \in \mathbb{Z}^{*n} $ tel que $T^{a_1}R^{b_1}...T^{a_n}R^{b_n} = \mathrm{I}_3$, alors :\par $$5^qT^{a_1}R^{b_1}...T^{a_n}R^{b_n} = 5^q\mathrm{I}_3 \equiv 0_{\mathcal{M}_3(\mathbb{R})}$$\par
+Ce qui n'est pas possible car d'après \hyperref[lemme7]{Lemme 5}: $$5^qT^{a_1}R^{b_1}...T^{a_n}R^{b_n} \equiv  \begin{pmatrix} 0 & 0 & 0 \\ a & b & 0 \\
+c  & d & 0 \end{pmatrix}, a,b,c,d \not \equiv 0 \pmod 5$$\par
+De plus :$$5^qT^{a_1}R^{b_1}...T^{a_n}R^{b_n}T^\beta \equiv  \begin{pmatrix} 0 & 0 & 0 \\ a & b & 0 \\
+c  & d & 0 \end{pmatrix}.\begin{pmatrix}
+   0 & 0 & 0 \\
+  0 & 3 & \epsilon_\beta \\
+ 0 & -\epsilon_\beta & 3
+\end{pmatrix} \equiv \begin{pmatrix}
+   0 & 0 & 0 \\
+  0 & 3b & b\epsilon_\beta \\
+ 0 & 3d &  d\epsilon_\beta
+\end{pmatrix} \not \equiv 0_{\mathcal{M}_3(\mathbb{R})}$$
+\par
+Les deux autres affirmations se déduisent facilement en passant à l'inverse.
+\end{proof}
+% Maintenant on a tous les outils pour pouvoir démontrer la \hyperref[prop3]{Proposition 3}.
+% \begin{proof}(Proposition 3)
+%   \hfill
+%
+%   D'après le \hyperref[lemme8]{Lemme 6}, $\mathrm{T}$ et $\mathrm{R}$ sont indépendants, et donc $\mathbb{G} = \langle \mathrm{R}, \mathrm{T} \rangle$ est libre.
+% \end{proof}
+\begin{Cor}
+  D'après le \hyperref[lemme8]{Lemme 6}, $\mathrm{T}$ et $\mathrm{R}$ sont indépendants, et donc $\mathbb{G} = \langle \mathrm{R}, \mathrm{T} \rangle$ est libre.
+\end{Cor}
+\begin{prop}\label{prop4}
+  $$\mathrm{G} = \langle \rho, \tau \rangle \text{ est libre }\Rightarrow \forall g \in \mathrm{G}-\{\mathrm{Id_E}\}, \exists! n,  (s_1, ..., s_n), (a_1, ..., a_n) \in  \mathbb{Z}\times\{\rho, \tau\}^n \times \mathbb{Z}^{*n},s_i \neq s_{i+1} , g = s_1^{a_1}s_2^{a_2}...s_n^{a_n}$$\par
+\end{prop}
+\begin{proof}
+  \hfill
+
+  En utilisant la \hyperref[prop2]{Proposition 2}, on obtient que $$\forall g \in \mathrm{G}-\{\mathrm{Id_E}\}, \exists n \in \mathbb{Z},  (s_1, ..., s_n) \in \{\rho, \tau\}^n,s_i \neq s_{i+1}, (a_1, ..., a_n) \in \mathbb{Z}^n, g = s_1^{a_1}s_2^{a_2}...s_n^{a_n}$$\par
+  Si on suppose que :$\exists n,n' \in \mathbb{N}^*,  ((s_1, ..., s_n,s_1', ..., s_n')) \in \{\rho, \tau\}^{n+n'}, (a_1, ..., a_n, a_1',...,a_n') \in \mathbb{Z}^{n+n'}$ tel que :
+  $$s_i \neq s_{i+1},s_i' \neq s_{i+1}', g = s_1^{a_1}s_2^{a_2}...s_n^{a_n}= (s_1')^{a_1'}(s_2')^{a_2'}...(s_n')^{a_n'}$$\par
+  Alors on a que $$s_n^{-a_n}...s_1^{-a_1}(s_1')^{a_1'}...(s_n')^{a_n'} = \mathrm{Id_E}$$\par
+  et ceci ne peut être vrai que si $\forall j, s_j^{-a_j}(s_j')^{a_j'}=\mathrm{Id_E}$ car sinon on trouve une contradiction avec le \hyperref[lemme8]{Lemme 6}.\par
+  Donc on conclut que $n=n'$, $s_j = s'_j$ et $a_j=a_j'$ pour tout $j$, d'où le résultat.
+\end{proof}
+\begin{remarkk}\label{remarkk6}
+  Par définition de $\mathrm{G}$ : $$\mathrm{G}=\underset{n\in \mathbb{N}^*}{\bigcup}\Bigg( \underset{\begin{subarray}{c}
+  (s_1, ..., s_n) \in \{\rho, \tau\}^n \\
+  (a_1, ..., a_n) \in \mathbb{Z}^{*n}
+    \end{subarray}}{\bigcup}s_1^{a_1}s_2^{a_2}...s_n^{a_n}\Bigg) \bigcup \{ \mathrm{Id_E}\}$$
+  Donc puisque $\mathbb{N}^*$, $\mathbb{Z}^{*n}$ et $\{\rho, \tau\}^n$ sont dénombrables alors $\mathrm{G}$ l'est aussi.
+\end{remarkk}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent
+Maintenant après avoir construit un groupe libre de rang $2$, on va montrer que ce dernier peut être construit à partir de parties strictement incluses dans lui (après composition par des éléments de $\mathrm{G}$).\par
+\begin{definition}\label{6}
+  On appelle terme de tête de $g=s_1^{a_1}s_2^{a_2}...s_n^{a_n}\in \mathrm{G}-\{ \mathrm{Id_E}\}$ l'élément $s_1$ lorsque $a_1 >0$ et $s_1^{-1}$ lorsque $a_1<0$, on le note $t(g)$. Pour tout élément $\sigma$ de $\{\rho, \rho^{-1}, \tau, \tau^{-1}\}$, on note $\mathrm{L}(\sigma)$ l'ensemble des éléments $g$ de $\mathrm{G}-\{\mathrm{Id_E}\}$ pour lesquels $t(g)=\sigma$
+\end{definition}
+\begin{prop}
+  On prenant les mêmes notations que dans la \hyperref[6]{définition 6}, on a que
+    $$\mathrm{G}=\mathrm{L}(\rho)\cup\rho\mathrm{L}(\rho^{-1})= \mathrm{L}(\tau)\cup\tau\mathrm{L}(\tau^{-1})$$
+\end{prop}
+\begin{lemma}\label{lemme9}
+ On a que
+  \begin{align*}
+    &\mathrm{L}(\rho) = \{\rho\}\cup\rho\mathrm{L}(\rho)\cup\rho\mathrm{L}(\tau)\cup\rho\mathrm{L}(\tau^{-1})\\
+    &\mathrm{L}(\rho^{-1}) = \{\rho^{-1}\}\cup\rho^{-1}\mathrm{L}(\rho^{-1})\cup\rho^{-1}\mathrm{L}(\tau)\cup\rho^{-1}\mathrm{L}(\tau^{-1})\\
+    &\mathrm{L}(\tau) = \{\tau\}\cup\tau\mathrm{L}(\tau)\cup\tau\mathrm{L}(\rho)\cup\tau\mathrm{L}(\rho^{-1})\\
+    &\mathrm{L}(\tau^{-1}) = \{\tau^{-1}\}\cup\tau^{-1}\mathrm{L}(\tau^{-1})\cup\tau^{-1}\mathrm{L}(\rho)\cup\tau^{-1}\mathrm{L}(\rho^{-1})\\
+  \end{align*}
+  \par
+et toutes ces réunions sont disjointes.
+\end{lemma}
+\begin{proof}
+  Pour un élément $g=s_1^{a_1}s_2^{a_2}...s_n^{a_n}$ tel que $t(g)=\rho$ c'est à dire $a_1>0$, on a :
+  \begin{align*}
+    a_1 =1 \Rightarrow \left\{
+    \begin{array}{ll}
+        g= \rho  \text{ si n=1}\\
+        g \in \rho\mathrm{L}(\tau) \text{ si $a_2>0$}\\
+        g \in \rho\mathrm{L}(\tau^{-1}) \text{ si $a_2<0$}
+    \end{array}
+     \right.
+     \text{ et }
+     a_1 \ge 2 \Rightarrow   g \in \rho\mathrm{L}(\rho)
+   \end{align*}
+   \par
+   Alors $\mathrm{L}(\rho) = \{\rho\}\cup\rho\mathrm{L}(\rho)\cup\rho\mathrm{L}(\tau)\cup\rho\mathrm{L}(\tau^{-1})$. Puisque les $a_i$ sont définis de manière unique, l'union est disjointe \par et on obtient une partition de $\mathrm{L}(\sigma)$ (de même pour les autres partitions).
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{proof}[Démonstration de la Proposition 4]
+  \hfill
+
+D'après \hyperref[lemme9]{Lemme 7}, on a :  $\rho\mathrm{L}(\rho^{-1}) = \{\mathrm{Id_E}\}\cup\mathrm{L}(\rho^{-1})\cup\mathrm{L}(\tau)\cup\mathrm{L}(\tau^{-1})$, donc :
+$$\mathrm{G}=\mathrm{L}(\rho)\cup\rho\mathrm{L}(\rho^{-1})= \mathrm{L}(\tau)\cup\tau\mathrm{L}(\tau^{-1})$$\par
+La deuxième égalité se démontre de la même manière. De plus ces unions sont disjointes, ce qui donne une\par partition de $\mathrm{G}$.
+\end{proof}
+\noindent
+Après avoir construit un groupe libre $\mathrm{G}$ de rang $2$, on va dans la partie suivante passer à la \hyperref[2.]{deuxième} étape de la démonstration, en construisant un sous-ensemble $\mathrm{X} \subset \mathrm{S}^2$ tel que l'action de $\mathrm{G}$ sur $\mathrm{X}$ soit libre.

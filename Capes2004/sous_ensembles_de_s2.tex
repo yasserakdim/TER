@@ -1,0 +1,230 @@
+\section{Étude d'un sous ensemble $\mathrm{X}$ de $\mathrm{S}^2$ sans points fixe de $\mathrm{G}$.}
+On a vu dans \ref{2.} que l'ensemble $\mathrm{X} \subset \mathrm{S}^2$ qu'on doit construire doit vérifier que l'action de $\mathrm{G}$ sur lui soit libre, ce qui nous amène à éviter les éléments $x\in  \mathrm{S}^2$ qui verifient $g(x) = x$ pour un certain $g \in \mathrm{G}$. On définit l'ensemble $\mathrm{X}$ de la façon suivante :
+\begin{definition}
+  On considère l'ensemble $$\mathrm{F}=\{v \in \mathrm{S}^2 | \exists g \in \mathrm{G}-\{\mathrm{Id_E}\}\text{, } g(v)=v\}$$ et on définit l'ensemble $\mathrm{X}$ comme étant le complémentaire de $\mathrm{F}$ c.à.d : $$\mathrm{X} = \mathrm{S}^2 \textbackslash \mathrm{F}$$
+\end{definition}
+\begin{prop}\label{prop6}
+  \hfill
+
+  Pour tout élément $g$ dans $\mathrm{G}$, l'application :
+  \begin{align*}
+ g_X \colon X &\to X\\
+ x &\mapsto g(x).
+\end{align*}\par
+est bijective et :
+  \begin{align*}
+  \phi \colon \mathrm{G} &\to \mathfrak{S}(X)\\
+  g &\mapsto g_X.
+\end{align*}\par
+est un homomorphisme injectif de groupes.
+\end{prop}
+\begin{lemma}\label{lemme10}
+  L'ensemble $\mathrm{X}$ n'est pas vide, et son complémentaire est dénombrable.
+\end{lemma}
+\begin{proof}
+  \hfill
+
+  On sait que $\mathrm{G}$ est un sous-groupe de $\mathcal{SO}(\mathrm{E})$ et donc pour tout $g$ dans $\mathrm{G}$ il existe une droite vectorielle $D$ \par tel que $g$ est une rotation d'axe $D$.
+
+    %
+    \begin{center}
+    \begin{tikzpicture}[tdplot_main_coords, scale = 2]
+    % Draw shaded circle
+    \shade[ball color = lightgray,
+        opacity = 0.5
+    ] (0,0,0) circle (1cm) ;
+    % draw arcs
+    \tdplotsetrotatedcoords{0}{0}{0};
+    \draw[dashed,
+        tdplot_rotated_coords,
+        gray
+    ] (0,0,0) circle (1);
+    \tdplotsetrotatedcoords{90}{90}{90};
+    \draw[dashed,
+        tdplot_rotated_coords,
+        gray
+    ] (1,0,0) arc (0:180:1);
+    \tdplotsetrotatedcoords{0}{90}{90};
+    \draw[dashed,
+        tdplot_rotated_coords,
+        gray
+    ] (1,0,0) arc (0:180:1);
+    % Axes in 3 d coordinate system
+    \draw[-stealth] (0,0,0) -- (1.90,0,0)
+        node[below left] {$x$};
+    \draw[-stealth] (0,0,0) -- (0,1.30,0)
+        node[below right] {$y$};
+    \draw[-stealth] (0,0,0) -- (0,0,1.30)
+        node[above] {$z$};
+    \draw[dashed, gray] (0,0,0) -- (-1,0,0);
+    \draw[dashed, gray] (0,0,0) -- (0,-1,0);
+    \draw[thick, color = gray] (3,3,3) -- (-3,-3,-3) node[below left] {$D$};
+    \coordinate (P) at ({1/sqrt(3)},{1/sqrt(3)},{1/sqrt(3)});
+    \coordinate (P') at ({-1/sqrt(3)},{-1/sqrt(3)},{-1/sqrt(3)});
+    \draw[fill = lightgray!50] (P) circle (0.5pt) node[right, color=blue] {$x$};
+    \draw[fill = lightgray!50] (P') circle (0.5pt) node[left, color=blue] {$x'$};
+
+    \draw[thin, dashed, color=blue] (P) --++ (0,0,{-1/sqrt(3)});
+    \draw[thin, dashed, color=blue] ({1/sqrt(3)},{1/sqrt(3)},0) --++
+    (0,{-1/sqrt(3)},0);
+    \draw[thin, dashed, color=blue] ({1/sqrt(3)},{1/sqrt(3)},0) --++
+    ({-1/sqrt(3)},0,0);
+    \draw[thin, dashed, color=blue] (0, 0, {1/sqrt(3)}) --++
+    ({1/sqrt(3)}, {1/sqrt(3)}, 0);
+    \draw[thin, dashed, color=blue] ({1/sqrt(3)},{1/sqrt(3)},0) --++
+    ({-1/sqrt(3)},{-1/sqrt(3)},0);
+
+    \draw[thin, dashed, color=blue] (P') --++ (0,0,{1/sqrt(3)});
+    \draw[thin, dashed, color=blue] ({-1/sqrt(3)},{-1/sqrt(3)},0) --++
+    (0,{1/sqrt(3)},0);
+    \draw[thin, dashed, color=blue] ({-1/sqrt(3)},{-1/sqrt(3)},0) --++
+    ({1/sqrt(3)},0,0);
+    \draw[thin, dashed, color=blue] (0, 0, {-1/sqrt(3)}) --++
+    ({-1/sqrt(3)}, {-1/sqrt(3)}, 0);
+    \draw[thin, dashed, color=blue] ({-1/sqrt(3)},{-1/sqrt(3)},0) --++
+    ({1/sqrt(3)},{1/sqrt(3)},0);
+
+    %
+    \draw[dashed, gray] (0,0,0) -- (-1,0,0);
+    \draw[dashed, gray] (0,0,0) -- (0,-1,0);
+    \draw[dashed, gray] (0,0,0) -- (0,0,-1);
+    %
+
+
+    \end{tikzpicture}
+  \end{center}
+    %
+    \par
+  Donc la droite vectorielle $D$ intersecte $\mathrm{S}^2$ en deux points $x_g$ et $x'_g=-x_g$, alors :
+  $$\mathrm{F}=\underset{g \in \mathrm{G}-\{\mathrm{Id_E}\}}{\bigcup}\{x_g, -x_g\} $$
+  \par Or $\mathrm{G}$ est dénombrable et $\{x_g, -x_g\}$ est fini donc $\mathrm{F}$ est dénombrable. De plus il est clair que la sphere $\mathrm{S}^2$\par n'est pas dénombrable car si on prend juste un cercle de la sphere par exemple celui pour laquelle $z=0$ \par alors ce dernier est isomorphe à $[-\pi, \pi[$ qui n'est pas dénombrable, et donc l'ensemble $\mathrm{X}$ ne peut pas être \par vide; car sinon $\mathrm{F}=\mathrm{S}^2$, et l'un est dénombrable et l'autre ne l'est pas.\par
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{lemma}\label{lemme11}
+  L'ensemble $\mathrm{X}$ est stable sous l'action de $\mathrm{G}$, i.e :
+  $$\forall g \in \mathrm{G},\forall v \in \mathrm{X}, g(v) \in \mathrm{X}$$
+\end{lemma}
+\begin{proof}
+  \hfill
+
+Soit $v \in \mathrm{X}$ si $g\left(v\right) \in \mathrm{F}$ alors $\exists g' \in \mathrm{G}-\{\mathrm{Id_E}\}, g'\left(g\left(v\right)\right)=g\left(v\right)$ et donc $g^{-1}\left(g'\left(g\left(v\right)\right)\right)=v \in \mathrm{F}$.
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{lemma}\label{lemme12}
+  Soient $g$ et $h$ deux éléments de $\mathrm{G}$. Si $\exists v \in \mathrm{X}$ vérifiant $g(v)=h(v)$, alors $h=g$.
+\end{lemma}
+\begin{proof}
+  \hfill
+
+  Si $h \neq g$, $h^{-1}\circ g \neq \mathrm{Id_E}$ et $h^{-1}\circ g(v)=v$ alors $v \in \mathrm{F}$ ce qui n'est pas possible car $v \in \mathrm{X}= \mathrm{S}^2-\mathrm{F}$.
+\end{proof}
+\noindent
+Jusqu'ici on a montré que l'ensemble $\mathrm{X}$ est différent de $\emptyset$, et que l'application $g_X \colon X \to X \colon x \to g(x)$ est bien définie $\forall g \in \mathrm{G}$. Donc on va maintenant démontrer la \hyperref[prop6]{Proposition 5}.\par
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{proof}[Démonstration de la Proposition 5]
+  \hfill
+
+  Puisque $\forall g \in \mathrm{G}, \forall v \in \mathrm{E}, \norme{g(v)} = \norme{v}$, la sphere unitaire est stable par $g$, et donc tout élément $g$ induit une\par bijection de $\mathrm{S}^2$. D'après le \hyperref[lemme11]{Lemme 9} $$\forall v \in \mathrm{X}, g(v) \in \mathrm{X}, g^{-1}(v) \in \mathrm{X}$$\par donc $g$ induit une bijection de $\mathrm{X}$ sur lui même que l'on notera $g_X$. \par
+  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  Soit $v \in \mathrm{X}$, alors :
+  \begin{align*}
+  \phi(g \circ h)(v) &= g\circ h(v)\\
+   &= \phi(g) \circ \phi(h)(v) \text{ car $y=h(v)\in \mathrm{X}$ et $g(y) \in \mathrm{X}$}
+  \end{align*}
+  \par
+  de plus $\phi$ est injective, car si $g(v)=h(v), \forall v \in \mathrm{X}$ alors d'après le \hyperref[lemme12]{Lemme 10} $h=g$.\par
+\end{proof}
+
+% \begin{lemma}\label{lemme13}
+%   La relation $\sim_\mathrm{G}$ définie par : $a\sim_\mathrm{G}b \Leftrightarrow \exists g \in \mathrm{G}, a=g(b)$ est une relation d'équivalence sur $\mathrm{X}$.
+% \end{lemma}
+% \begin{proof}
+%   \hfill
+%
+%   Il est clair que $a = \mathrm{Id_G}(a)$ donc $a\sim_\mathrm{G}a$ càd $\sim_\mathrm{G}$ est réfléxive, de plus si $a = g(b)$, alors $b = g^{-1}(a)$, et donc \par $\sim_\mathrm{G}$ est symétrique, et enfin si $a=g(b)$ et $b=h(c)$ alors $a=g\circ h(c)$, donc $\sim_\mathrm{G}$ est transitive, et donc $\sim_\mathrm{G}$ est \par bien une relation d'équivalence.\par
+% \end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{definition}
+  On sait que les orbites forment une partition de $\mathrm{X}$, donc en utilisant \hyperref[axiome]{l'axiome du choix} on définit l'ensemble $\mathrm{M}$ en choisissant un représentant de chaque orbite, pour garantir une unicité des éléments de $X$ après l'action de $G$.
+\end{definition}
+
+\begin{lemma}\label{lemme14}
+   La famille $(g(\mathrm{M}))_{g \in \mathrm{G}}$ constitue une partition de $\mathrm{X}$.
+\end{lemma}
+\begin{proof}
+  \hfill
+
+On vérifie facillement que
+  \begin{itemize}
+    \item Si $x \in g(M)\cap g'(M)$ alors $\exists y, y' \in M, x=g(y)=g'(y')$ ce qui n'est pas possible par définition de $M$.
+    \item $M \ne \emptyset$ donc $\forall g \in \mathrm{G}, g(M) \ne \emptyset$.
+    \item $\underset{g \in \mathrm{G}}{\bigcup}g(M) = \underset{a \in \mathrm{M}}{\bigcup}\underset{g \in \mathrm{G}}{\bigcup}g(a) = \mathrm{X}$
+  \end{itemize}\par
+  Donc $(g(\mathrm{M}))_{g \in \mathrm{G}}$ est une partition de $\mathrm{X}$. Visuellement si on prend $M = \{a_1, a_2 ...\}$ alors :
+
+  \begin{center}
+    $\mathrm{X} = $
+  \begin{tabular}{|c|c|c|c|c|}
+  \hline
+  $a_1$ & $a_2$ & $a_3$ & $.$ & $.$\\
+  % \hline
+  $g_1(a_1)$ & $g_1(a_2)$ & $g_1(a_3)$ & $.$ & . \\
+  % \hline
+  $g_2(a1)$ & $g_2(a_2)$ & $g_2(a_3)$ & . & . \\
+  % \hline
+  . & . & . & . & .  \\
+  % \hline
+  . &.&.&.&.\\
+  \hline
+  \end{tabular}
+  =
+  \begin{tabular}{|r|}
+  \hline
+  \text{$a_1$ $a_2$ $a_3$ . . . . . . . . . .}\\
+  \hline
+  $g_1(a_1)$  $g_1(a_2)$  $g_1(a_3)$  $.$  . \\
+  \hline
+  $g_2(a1)$  $g_2(a_2)$  $g_2(a_3)$  .  . \\
+  \hline
+  . . . . . . . . . . . . . . . . .  \\
+  \hline
+  . . . . . . . . . . . . . . . . .\\
+  \hline
+  \end{tabular}
+  \end{center}
+  \par
+  c'est à dire qu'on peut répartir $\mathrm{X}$ soit horizontalement ou vérticalement.
+
+  \par
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{prop}\label{prop7}
+  On pose :
+  $$X_0 = \mathrm{M}, X_1 = \underset{g \in L(\rho)}{\bigcup} g(\mathrm{M}), X_2 = \underset{g \in L(\tau)}{\bigcup} g(\mathrm{M}), X_3 = \underset{g \in L(\rho^{-1})}{\bigcup} g(\mathrm{M}), X_4 = \underset{g \in L(\tau^{-1})}{\bigcup} g(\mathrm{M})$$\par
+  \par Les parties $(X_0, X_1, X_2, X_3, X_4)$, $(X_1, \rho(X_3))$ et $(X_2, \tau(X_4))$ forment des partitions de $\mathrm{X}$.
+\end{prop}
+\begin{proof}
+  \hfill
+
+\noindent
+  Puisque $\mathrm{G} = \langle \rho, \tau\rangle = \{ \mathrm{Id_E}\}\cup \mathrm{L}(\rho) \cup \mathrm{L}(\rho^{-1}) \cup \mathrm{L}(\tau) \cup \mathrm{L}(\tau^{-1})$, où $\rho$ et $\tau$ sont des isométries positives, et les réunions sont disjointes, et  $(g(\mathrm{M}))_{g \in \mathrm{G}}$ est une partition de $\mathrm{X}$ alors on conclut que: $(X_0, X_1, X_2, X_3, X_4)$ \text{ est une partition de } $\mathrm{X}$.\\
+  On a déjà montré que : $\mathrm{G}=\mathrm{L}(\rho)\cup\rho\mathrm{L}(\rho^{-1})= \mathrm{L}(\tau)\cup\tau\mathrm{L}(\tau^{-1})$, où les réunions sont disjointes,  et  $(g(\mathrm{M}))_{g \in \mathrm{G}}$ est une partition de $\mathrm{X}$ donc il suit que
+  \begin{align*}
+    \mathrm{X} &= X_1\cup \rho(X_3) \text{ et } X_1 \cap \rho(X_3) = \emptyset \\
+    \mathrm{X} &= X_2\cup \tau(X_4) \text{ et } X_2 \cap \tau(X_4) = \emptyset
+  \end{align*}
+Il suit que $(X_1, \rho(X_3))$ et $(X_2, \tau(X_4))$ forment des partitions de $\mathrm{X}$, et donc $\mathrm{X}$ est \hyperref[ed]{équidécomposable} à deux copies de $\mathrm{X}$.
+\end{proof}
+
+\begin{remarkk}
+  On remarque que les ensembles construits sont non mésurables (au sens le Lebesgue), et que c'est l'axiome du choix qui nous a permit de construire de tels ensembles.\\
+  En effet, si les ensembles étaient mésurable alors on aurait que
+  \begin{align*}
+    \mu(X) &= \mu(X_0) + \mu(X_1)+ \mu(X_2)+\mu(X_3)+\mu(X_4) = \mu(X_1) + \mu(\rho(X_3)) = \mu(X_2) + \mu(\rho(X_4))\\
+    &=\mu(X_1) + \mu(X_3)=\mu(X_2) + \mu(X_4)\text{ (la rotation ne change pas la mésure d'un ensemble mésurable). }\\
+    &=0 \text{, ce qui est absurde car $\mu(\mathrm{X}) = \mu(\mathrm{S}^2)$, puisque $F$ est dénombrable.}
+  \end{align*}
+  où $\mu$ est la mésure de Lebesgue.
+\end{remarkk}
+\noindent
+Dans la partie suivante on va essayer de décomposer $\mathrm{S}^2$ en parties et les réaranger après composition par des rotations et des translations pour construire l'ensemble $\mathrm{X}$. Pour cela on va introduire la notion d'équidécomposabilité.

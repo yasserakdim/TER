@@ -1,0 +1,186 @@
+\chapter{Décomposition d'ensembles de points en parties respectivement congruentes.}
+Dans ce chapitre on va étudier le paradoxe dans le cas général en s'appuyant sur les résultats du deuxième chapitre, et on
+va montrer en fin du chapitre que le paradoxe n'est pas vrai en dimension inférieur à $2$ .
+\section{Propriétés générales de l'équivalence par décomposition finie.}\label{3.}
+% \setcounter{definition}{0}
+\setcounter{lemma}{0}
+\newtheorem{deff}{Définition}
+\newtheorem{T}{Théorème}
+\newtheorem{Co}{Corollaire}
+\newtheorem{PR}{Proposition}
+% \setcounter{theorem}{0}
+% \setcounter{prop}{0}
+Les raisonnements de ce chapitre sont valables pour les ensembles de points situés dans un espace quelconque, sur lequel est faite l'hypothèse unique qu'à tout couple de points $(a,b)$ correspond un nombre réel $\mathcal{\rho}(a,b)$ appelé distance des points $a$ et $b$. On va se baser dans ce chapitre sur les articles originaux de Stefan Banach et Alfred Tarski \cite{cite0}.
+\begin{deff}\label{def3.1}
+  On dit que les ensembles de points $\mathrm{A}$ et $\mathrm{B}$ sont congruents et on écrit $$\mathrm{A} \cong \mathrm{B}$$
+  S'il existe une fonction $\varphi$ qui transforme d'une façon biunivoque $\mathrm{A}$ en $\mathrm{B}$, et qui vérifie  $$\forall a,a' \in \mathrm{A}, \mathcal{\rho}(a, a') =  \mathcal{\rho}\left(\varphi\left(a\right), \varphi\left(a'\right)\right)$$
+\end{deff}
+
+\begin{deff}\label{def3.2}
+  On dit que les ensembles de points $\mathrm{A}$ et $\mathrm{B}$ sont équivalents par décomposition finie et on écrit :$$\mathrm{A} \sim \mathrm{B}$$ s'il existe un $n \in \mathbb{N}^*$ et des familles d'ensembles $\left(\mathrm{A}_i\right)_{1\le i \le n}$ et $\left(\mathrm{B}_i\right)_{1\le i \le n}$ tels que :
+  \begin{center}
+  \begin{enumerate}
+    \item $\mathrm{A} = \underset{1\le i \le n}{\bigcup}\mathrm{A}_i \text{ et } \mathrm{B} = \underset{1\le i \le n}{\bigcup}\mathrm{B}_i$
+    \item $\mathrm{A}_i \cap \mathrm{A}_j = \mathrm{B}_i \cap \mathrm{B}_j = \emptyset, \forall i\neq j$
+    \item $\mathrm{A}_i \cong \mathrm{B}_i, \forall i=1, ...,n$
+  \end{enumerate}
+\end{center}
+\end{deff}
+
+\begin{PR}
+  Si $\mathrm{A} \cong \mathrm{B}$ alors $\mathrm{A} \sim \mathrm{B}$
+\end{PR}
+\begin{proof}
+  Ceci découle de la \hyperref[def3.2]{Définition 2}, en prenant $n = 1$.
+\end{proof}
+\begin{PR}
+  La relation $\sim$ est une relation d'équivalence.
+\end{PR}
+\begin{proof}
+  \hfill
+  \begin{itemize}
+    \item Réflexivité : $A$ est une partition de $A$ et $A=\mathrm{Id_E}(A)$, avec $\mathrm{Id_E}$ bijective de $\mathrm{A}$ dans $\mathrm{A}$ et vérifie :$$\forall a,a' \in \mathrm{A}, \mathcal{\rho}(a, a') =  \mathcal{\rho}\left(\mathrm{Id_E}\left(a\right), \mathrm{Id_E}\left(a'\right)\right)$$
+    Donc :$$A\sim A$$.
+    \item Symétrie : Si $A \sim B$ alors $\exists (A_i)_{1 \le i\le n}, (B_i)_{1 \le i\le n}, (\varphi_i)_{1 \le i\le n} \text{ tels que } B_i=\varphi_i(A_i)$ et donc :$$A_i=\varphi_i^{-1}(B_i), \forall i=1,..,n$$
+    Avec $\forall i=1,..,n$, $\varphi_i^{-1}$ est bijective de $\mathrm{B}_i$ dans $\mathrm{A}_i$, et :
+    $$\forall b=\varphi(a),b'=\varphi(a') \in \mathrm{B}_i, \mathcal{\rho}(b, b') = \mathcal{\rho}(\varphi(a), \varphi(a'))=\mathcal{\rho}(a, a') =\mathcal{\rho}\left(\varphi_i^{-1}\left(b\right), \varphi_i^{-1}\left(b'\right)\right)$$
+     D'où  $B \sim A$.
+    \item Transitivité : Si $A \sim B$ et $B \sim C$ alors, $\exists I, J$ finis, $\exists (A_i)_{i \in I}, (B_i)_{i \in I}, (\varphi_i)_{i \in I}$, $(B_j)_{j \in J}, (C_j)_{j \in J}$ et $(\varphi_j)_{j \in J}$ tels que $(A_i)_{i \in I}$ est une partition de $\mathrm{A}$, $(B_i)_{i \in I}$ et $(B_j)_{j \in J}$ sont des partitions de $B$ et $(C_j)_{j \in J}$ est une partition de $C$, et $\forall (i,j) \in I \times J$ :
+    % $\exists I$ fini, $\exists (A_i)_{i \in I}, (B_i)_{i \in I}, (\varphi_i)_{i \in I}$  tels que $\forall i \in I$:\\
+     $$\varphi_i \text{ est bijective de $\mathrm{A}_i$ dans $\mathrm{B}_i$, et } \forall a,a' \in \mathrm{A}, \mathcal{\rho}(a, a') =  \mathcal{\rho}\left(\varphi_i\left(a\right), \varphi_i\left(a'\right)\right)$$
+     et :
+     % et $\exists J$ fini $\exists (B_j)_{j \in J}, (C_j)_{j \in J}, (\varphi_j)_{j \in J}$  tels que  $\forall j \in J$:\\
+          $$\varphi_j \text{ est bijective de $\mathrm{B}_j$ dans $\mathrm{C}_j$, et } \forall b,b' \in \mathrm{B}, \mathcal{\rho}(b, b') =  \mathcal{\rho}\left(\varphi_j\left(b\right), \varphi_j\left(b'\right)\right)$$
+
+    On considère l'ensemble $K=\{ (i,j) \in I \times J \mid B_i\cap B_j\neq \emptyset \}$, et on considère :\\
+    $$(B_i\cap B_j)_{(i,j)\in K} \text{, } (\varphi_i^{-1}(B_i\cap B_j))_{(i,j)\in K}\text{ et } (\varphi_j^{-1}(B_i\cap B_j))_{(i,j)\in K}$$ partitions de $B$, $A$ et $C$ respectivement.\\
+     On a donc $\forall (i,j)\in K$,
+     $\varphi_i^{-1} \circ \varphi_j$ est une bijection de $(\varphi_j^{-1}(B_i\cap B_j))_{(i,j)}$ dans $(\varphi_i^{-1}(B_i\cap B_j))_{(i,j)}$.\\ De plus $$\forall c=\varphi_j^{-1} \circ \varphi_i(a),c'=\varphi_j^{-1} \circ \varphi_i(a') \in (\varphi_j^{-1}(B_i\cap B_j))_{(i,j)}$$
+     on a que
+    $$\mathcal{\rho}(c, c') = \mathcal{\rho}(\varphi_j^{-1} \circ \varphi_i(a), \varphi_j^{-1} \circ \varphi_i(a'))=\mathcal{\rho}(\varphi_i(a), \varphi_i(a')) =\mathcal{\rho}\left(a,a'\right) = \mathcal{\rho}(\varphi_i^{-1} \circ \varphi_j(c), \varphi_i^{-1} \circ \varphi_j(c'))$$
+    Il s'en  suit que $A \sim C$.
+  \end{itemize}
+\end{proof}
+\begin{PR}\label{p3}
+   Soient $\left(\mathrm{A}_i\right)_{1\le i \le n}$ et $\left(\mathrm{B}_i\right)_{1\le i \le n}$ deux familles d'ensembles disjoints, tels que :
+   $$\mathrm{A}_i \sim \mathrm{B}_i, \forall i=1,..,n$$
+   Alors : $$\underset{1\le i \le n}{\cup} \mathrm{A}_i \sim \underset{1\le i \le n}{\cup} \mathrm{B}_i$$
+\end{PR}
+\begin{proof}
+Il suffit de le prouver pour $n=2$ et on généralise le résultat par récurrence.\\ Soient donc $A_1$, $A_2$, $B_1$ et $B_2$ tels que $A_1 \sim B_1$ et $A_2 \sim B_2$.\\
+Alors $\exists I, J$ et des partitions finies de $A_1$, $A_2$, $B_1$, $B_2$ :
+$((A_{1_i})_{i \in I})$, $((B_{1_i})_{i \in I})$, $((A_{2_j})_{j \in J})$, $((B_{2_j})_{j \in J})$ tels que :
+$$\forall (i,j) \in I\times J, A_{1_i} \cong B_{1_i} \text{ et } A_{2_j} \cong B_{2_j}$$
+Et puisque $(A_1, A_2)$ est une partition de $A_1\cup A_2$, et $(B_1, B_2)$ est une partition de $B_1\cup B_2$, alors :\\
+$\left(\underset{i}{\bigcup} A_{1_i} \right) \cup \left(\underset{j}{\cup} A_{2_j}\right)$ et $\left(\underset{i}{\bigcup} B_{1_i} \right) \cup \left(\underset{j}{\cup} B_{2_j}\right)$ sont des partitions de  $A_1\cup A_2$, et $B_1\cup B_2$ donc : $$A_1 \cup A_2 \sim B_1 \cup B_2$$
+Le résultat se généralise par récurrence pour toute collection de famille finies d'ensembles de points.
+\end{proof}
+\begin{PR}\label{p4}
+  Si $\mathrm{A} \sim \mathrm{B}$ alors il existe une bijection $\psi$ de $A$ dans $B$ tel que pour tout sous-ensemble $C$ de $A$ on a que $C \sim \psi(C)$.
+\end{PR}
+
+\begin{proof}
+  \hfill
+
+\noindent
+  On suppose que $A \sim B$, et soient $\left(\mathrm{A}_i\right)_{1\le i \le n}$, $\left(\mathrm{B}_i\right)_{1\le i \le n}$ et $\left(\varphi_i\right)_{1\le i \le n}$ qui vérifient les hypothèses de la définition \par de l'équivalence par décomposition finie. On pose :
+  \begin{align*}
+  \psi \colon A &\to B\\
+  x &\mapsto \varphi_i(x), \text{ avec $i$ tel que $x \in A_i$}.
+  \end{align*}
+  Puisque $\forall i \in I, B_i = \varphi_i(A_i)$ alors la fonction est clairement surjective, de plus si $\psi(x)= \psi (y)$, alors $\exists i, j$ tel que $\varphi_i(x)=\varphi_j(y)$, si $i\ne j$ alors $\varphi_i(x) \in B_i$ et $\varphi_j(y) \in B_j$ et $B_i \cap B_j = \emptyset$ donc $\varphi_i(x)\neq \varphi_j(y)$ et donc $i=j$, et par injectivité de $\varphi_i$ on conclut que $x=y$, et alors $\psi$ est injective, donc bijective.\\
+  Pour tout sous-ensemble $C$ de $A$, on a $(C\cap A_i)_{i \in I}$ est une partition de $C$ et $(\psi(C) \cap B_i)_{i \in I}$ est une partition de $\psi(C)$, et $\varphi_i(C\cap A_i)= \varphi_i(C)\cap B_i= \psi(C\cap A_i)=\psi(C)\cap B_i$ et donc $\forall i$:
+   $$C\cap A_i \cong  \psi(C)\cap B_i$$ et alors $C \sim \psi(C)$.
+\end{proof}
+
+\begin{Co}
+  Soit $\left(\mathrm{A}_i\right)_{1\le i \le n}$ une partition de $\mathrm{A}$ et soit B tel que $\mathrm{A} \sim \mathrm{B}$, alors il existe une partition $\left(\mathrm{B}_i\right)_{1\le i \le n}$ de $\mathrm{B}$ telle que $\mathrm{A}_i \sim \mathrm{B}_i, \forall i=1,..,n$.
+\end{Co}
+\begin{proof}
+  \hfill
+
+Il suffit de prendre $\mathrm{B}_i = \psi(\mathrm{A}_i)$ où $\psi$ est la fonction vérifiant les hypothèses de la proposition\par précédente, alors :
+\begin{itemize}
+  \item $\mathrm{A}_i \sim \mathrm{B}_i, \forall i=1,..,n$
+  \item $(\mathrm{B}_i)_{1\le i \le n} = (\psi(\mathrm{A}_i))_{1\le i \le n}$ est une partition de $\mathrm{B}$ (en utilise le même raisonnement que dans \hyperref[lemme 2]{corollaire 1 du préliminaires}).
+\end{itemize}
+\end{proof}
+\begin{Co}
+ Si $\mathrm{A} \sim \mathrm{B}$, alors pour tout ensemble $\mathrm{C}$ dans $\mathrm{A}$, il existe un ensemble $\mathrm{D}$ dans $\mathrm{B}$ tel que :
+ $$\mathrm{C} \sim \mathrm{D} \text{ et si }  \mathrm{C} \neq \mathrm{A} \text{, alors } \mathrm{D} \neq \mathrm{B}$$
+\end{Co}
+\begin{proof}
+Il suffit encore de prendre $D = \psi(C)$ alors :
+\begin{itemize}
+  \item $\mathrm{C} \sim \mathrm{D}$
+  \item Si $\mathrm{C} \neq \mathrm{A}$ alors $\mathrm{D}=\psi(C) \neq \mathrm{B}$, puisque $\psi$ est bijective.
+\end{itemize}
+\end{proof}
+
+\begin{T}(Théorème de Banach-Schröder-Bernstein)\label{T1}
+  Soient $\mathrm{A}_1 \subset \mathrm{A}$ et $\mathrm{B}_1 \subset \mathrm{B}$ tel que $\mathrm{A} \sim \mathrm{B}_1 \text{ et } \mathrm{B} \sim \mathrm{A}_1$, alors on a que $\mathrm{A} \sim \mathrm{B}$.
+\end{T}
+\noindent
+Avant de démontrer ce théorème, énonçons un autre théorème qui va nous servir dans la démonstration.
+\begin{T}\label{T2}
+  Soit $\varphi$ une fonction qui transforme de façon biunivoque l'ensemble $A$ en un sous ensemble de $B$, et $\psi$ une fonction qui transforme de façon biunivoque un sous ensemble de $A$ en l'ensemble $B$. Alors il existe une partition $(A_1, A_2)$ de $A$ et une partition $(B_1, B_2)$ de $B$ qui satisfait
+  $$\varphi(A_1) = B_1 \text{ et } \psi(A_2) = B_2$$
+\end{T}
+\begin{proof}
+  Soit $a$ un élément de $A$, et soit $C(a)$ l'intersection de tous les sous-ensembles $X$ de $A$ qui vérifient
+  \begin{itemize}
+    \item $a \in X$.
+    \item Si $x\in X$ on a $\psi^{-1} \circ \varphi(x) \in X$.
+    \item Et si $x\in X$ et $\varphi^{-1} \circ \psi(x)$ existe, on a $\varphi^{-1} \circ \psi(x) \in X$.
+  \end{itemize}
+  Les ensemble $C(a)$ où $a$ dans $A$ sont soit disjoints soit égaux. Soit ensuite $$A_2 =  \{a \in A \mid C(a) \in \psi^{-1}(B)\}$$
+  et soit $A_1$ le complémentaire de $A_2$ c'est à dire $$A_1 = A-A_2$$ Soient ensuite $$B_1 = \varphi(A_1) \text{ et } B_2 = \psi(A_2)$$
+  on peut faire ça car $A_2 \subset \psi^{-1}(B)$.\\
+  On a alors $B_1 \cup B_2 \subset B$, montrons l'inclusion réciproque.
+  Soit $b \in B$, et $a = \psi^{-1}(b)$ alors on a que
+  \begin{itemize}
+    \item Si $a \in A_2$ alors $b \in \psi(A_2) = B_2$.
+    \item Si $a \in A_1$ alors $\varphi^{-1}(b)$ existe, car sinon $a \in \psi^{-1}(B)$ et $C(a) \subset \psi^{-1}(B)$ ce qui signifie que $a\in A_2$ ce qui est absurde car $A_1 \cap A_2 = \emptyset$. De plus $\varphi^{-1}(b)$ existe et appartient à $A_1$, car $C(\psi^{-1}(b)) = C(\varphi^{-1}(b))$ car $\psi^{-1}(b) = \psi^{-1}\circ \varphi \circ \varphi^{-1}(b)$, et $\psi^{-1}(b) \in A_1$.
+  \end{itemize}
+  On conclut donc que $B \subset B_1 \cup B_2$ et alors $B = B_1 \cup B_2$
+\end{proof}
+\begin{proof}[Démonstration du Théorème 1]
+  \hyperref[T2]{Théorème 2} et \hyperref[p4]{Proposition 4} affirments qu'on peut trouver une partition $(A_1, A_2)$ de $A$ et une partition $(B_1, B_2)$ de $B$ tels que $A_1 \sim B_1$ et $A_2 \sim B_2$, alors $A_1 \cup A_2 \sim B_1 \cup B_2$ et alors $A \sim B$.
+\end{proof}
+\begin{Co}\label{c2}
+  Si $\mathrm{C} \subset \mathrm{B} \subset \mathrm{A}$ et $\mathrm{C} \sim \mathrm{A}$, alors :
+  $$\mathrm{A} \sim \mathrm{B} \text{ et } \mathrm{B} \sim \mathrm{C}$$
+\end{Co}
+\begin{proof}
+On a $\mathrm{B} \sim \mathrm{B} \subset \mathrm{A}$ et $\mathrm{A} \sim \mathrm{C} \subset \mathrm{B}$ donc d'après le \hyperref[T1]{Théorème 1}, en prenant $\mathrm{A}_1 = \mathrm{C}$ et $\mathrm{B}_1=\mathrm{B}$, on trouve que $\mathrm{A} \sim \mathrm{B}$, et puisque $\mathrm{A} \sim \mathrm{C}$ alors on a aussi $\mathrm{B} \sim \mathrm{C}$ (car $\sim$ est une relation d'équivalence).
+\end{proof}
+\begin{PR}\label{pr5}
+  Si $\mathrm{A} \sim \mathrm{A} \cup \mathrm{B}_i \text{ pour }i=1,..,n $ alors :
+  $$\mathrm{A} \sim \mathrm{A} \cup \left(\underset{1\le i \le n}{\cup}\mathrm{B}_i\right)$$
+\end{PR}
+\begin{proof}
+  \hfill
+  \begin{itemize}
+    \item  On va commencer par le cas où $\mathrm{A},\mathrm{B}_1,...,\mathrm{B}_n$ sont disjoints deux à deux.\\
+     On va procéder par récurrence. La proposition est triviale pour $n=1$, supposons qu'elle est vraie pour un certain $n \in \mathbb{N}$, et montrons le pour $n+1$. On a alors :
+     \begin{enumerate}
+       \item $\mathrm{A} \sim \mathrm{A} \cup \left(\underset{1\le i \le n}{\cup}\mathrm{B}_i\right)$.
+       \item $\mathrm{A} \sim \mathrm{A} \cup \mathrm{B}_{n+1}$.
+       \item Les ensembles $\mathrm{A},\mathrm{B}_1,...,\mathrm{B}_n, \mathrm{B}_{n+1}$ sont disjoints.
+     \end{enumerate}
+     On a alors d'après la \hyperref[p3]{proposition 3}, $1.$ et $3.$ impliquent que :
+    \begin{enumerate}
+      \setcounter{enumi}{3}
+      \item $\mathrm{A} \cup \mathrm{B}_{n+1} \sim \mathrm{A} \cup \left(\underset{1\le i \le n+1}{\cup}\mathrm{B}_i\right)$
+    \end{enumerate}
+    Et puisque $\sim$ est une relation d'équivalence alors d'après $2.$ et $4.$ on a : $$\mathrm{A} \sim \mathrm{A} \cup \left(\underset{1\le i \le n+1}{\cup}\mathrm{B}_i\right)$$
+    Ce qui termine la démonstration dans le cas où $\mathrm{A},\mathrm{B}_1,...,\mathrm{B}_n$ sont disjoints deux à deux.
+    \item On va passer maintenant au cas général, et on pose :
+    $$\mathrm{C}_1 = \mathrm{B}_1-\mathrm{A}, \text{ et } \mathrm{C}_k = \mathrm{B}_k - \left(\mathrm{A} \cup \left(\underset{1\le i \le k-1}{\cup}\mathrm{B}_i\right)\right), \text{ pour } k=2,..,n$$
+    Il est clair que $\mathrm{A} \cup \left(\underset{1\le i \le k-1}{\cup}\mathrm{C}_i\right) = \mathrm{A} \cup \left(\underset{1\le i \le k-1}{\cup}\mathrm{B}_i\right)$, et $\mathrm{A} \subset \mathrm{A} \cup \mathrm{C}_k \subset \mathrm{A} \cup \mathrm{B}_k$ pour tout $k$.\\
+    Le \hyperref[c2]{corollaire 3}, et le fait que $\mathrm{A} \sim \mathrm{A} \cup \mathrm{B}_k$, pour $k=1,..,n$, impliquent que $\mathrm{A} \sim \mathrm{A} \cup \mathrm{C}_k$, pour $k=1,..,n$.\\
+    Et puisque les ensembles $\mathrm{A},\mathrm{C}_1,...,\mathrm{C}_n$ sont disjoints deux à deux par définition, alors on se ramène au premier cas, et on conclut donc la proposition est vraie.
+  \end{itemize}
+\end{proof}
+
+\input{BanachTarski/espace3dim.tex}

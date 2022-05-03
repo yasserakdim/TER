@@ -1,0 +1,13 @@
+PWD /home/ensimag/Desktop/M1MG/S2/TER/Capes2004
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT capes2004_preliminaires.tex
+OUTPUT ./building_docs/capes2004_preliminaires.log
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+OUTPUT ./building_docs/capes2004_preliminaires.pdf
+INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map

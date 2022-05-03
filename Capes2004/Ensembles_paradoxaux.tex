@@ -1,0 +1,70 @@
+\noindent
+Soient $A$ et $B$ deux sous-ensembles non vides de $\mathrm{E}$. On écrira $A \le_\sim B$ lorsqu'il existe un sous-ensemble $B'$ non vide de $B$, tel que $A \sim B'$. En particulier si $A \sim B$ alors $A \le_\sim B$.\\
+La relation $\le_\sim$ est une relation réfléxive et transitive sur l'ensemble des partie non vides de $\mathrm{E}$. On observera par ailleurs que si $A$ et $B$ sont des sous-ensembles non vides de $\mathrm{X}$ tels que $A \subset B$, il est évident que $A \le_\sim B$.\par
+\begin{theorem}(Banach-Schröder-Bernstein)
+  Si $A$ et $B$ sont deux sous-ensembles non vides de $\mathrm{E}$ tels que $A \le_\sim B$ et $B \le_\sim A$, alors $A \sim B$.\par
+  \label{theorem1}
+\end{theorem}
+\begin{proof}
+  Admise à la première lécture, elle est faite au troisième chapitre \ref{T1}.
+\end{proof}
+\section{Ensembles Paradoxaux.}
+\noindent
+Un sous-ensemble $A$ de $\mathrm{E}$ est paradoxal s'il existe deux sous-ensembles non vides $C$, $B$ de $A$ tels que :
+$$B \sim A, C \sim A \text{ et } B \cap C=\emptyset \text{ $(*)$}$$
+On va montrer dans cette partie que l'ensemble $X$ est paradoxale, et on va passer cette propriété à $\mathrm{S}^2$ en utilisant l'équivalence par décomposition finie, pour enfin conclure que $\mathrm{S}^2$ est équidécomposable à deux copies de $\mathrm{S}^2$.
+\begin{prop}\label{prop11}
+  \hfill
+
+  Si $A, B \ne \emptyset$ deux sous-ensembles $\mathrm{E}$, tel que $A \sim B$, et $A$ est paradoxal, alors $B$ l'est aussi.
+\end{prop}
+\begin{proof}
+  \hfill
+
+  Soient $A, B \ne \emptyset$ deux sous-ensembles $\mathrm{E}$ telles que $A \sim B$, et $A$ paradoxal, alors :$$\exists D, C \text{ tel que } D\cap C =\emptyset, \text{ et } D\sim A, C\sim A$$\par
+  Et donc d'après la \hyperref[prop10]{Proposition 9} : $$\psi(D\cap C) = \psi(D)\cap \psi(C)= \emptyset, \text{ et } \psi(D)\sim D \sim A \sim B, \text{ et }  \psi(C)\sim C \sim A \sim B$$\par
+  Alors $B$ est paradoxal.\par
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{prop}\label{prop12}
+  \hfill
+
+  Soit $A$ un sous-ensemble de $\mathrm{E}$, $B$ et $C$ deux ensembles non vides de $A$ qui vérifient $(*)$.\par
+   Alors $\exists (A_1, A_2) \text{ une partition de } A, \text{ tel que } A_1 \sim A, A_2 \sim A$.
+\end{prop}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{proof}
+  \hfill
+
+    En utilisant le \hyperref[theorem1]{Theorème 2}, puisque $B \subset A-C$ alors $A \sim B \le A-C$ donc $A\le A-C$, de plus\par $A-C \subset A$ donc $A-C \le A$ et alors $A-C \sim A$\par
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    Donc $A_1=C$ et $A_2=A-C$ vérifient les hypothèse de la proposition.\par
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{lemma}\label{lemme19}
+  L'ensemble $\mathrm{X}$ est paradoxal.
+\end{lemma}
+\begin{proof}
+  \hfill
+
+  D'après la \hyperref[prop7]{Proposition 6} :
+  \begin{align*}
+    \mathrm{X} &= X_1\cup \rho(X_3) \text{ et } X_1 \cap \rho(X_3) = \emptyset \\
+    \mathrm{X} &= X_2\cup \tau(X_4) \text{ et } X_2 \cap \tau(X_4) = \emptyset
+  \end{align*}\par
+  Donc $\mathrm{X} \sim X_1 \cup X_3$ et $\mathrm{X} \sim X_2 \cup X_4$ et $(X_1 \cup X_3)\cap (X_2\cup X_4)=\emptyset$, i.e $\mathrm{X} \text{ est paradoxal}$.\par
+\end{proof}
+
+\begin{lemma}\label{lemme20}
+  Si $\Sigma_1$ et $\Sigma_2$ deux spheres unitées disjointes, alors $\mathrm{S}^2 \sim  \Sigma_1\cup  \Sigma_2$.
+\end{lemma}
+\begin{proof}
+  \hfill
+\begin{itemize}
+  \item D'après la \hyperref[prop8]{Proposition 7}, $\mathrm{S}^2 \sim \mathrm{X}$, et $\mathrm{X}\ne \emptyset$ est paradoxal, alors d'après la \hyperref[prop11]{Proposition 10} $\mathrm{S}^2$ est paradoxal.\par
+  \item Soient $\Sigma_1$ et $\Sigma_2$ deux spheres unitées disjointes, alors $\mathrm{S}^2 \sim \Sigma_1$ et $\mathrm{S}^2 \sim \Sigma_2$, de plus soient $A_1$ et $A_2$ tels que \par $(A_1, A_2)$ est une partition de $\mathrm{S}^2$, et $A_1 \sim \mathrm{S}^2$, et $A_2 \sim \mathrm{S}^2$, alors :\par
+  $A_1 \sim \mathrm{S}^2 \sim \Sigma_1$ et $A_2 \sim\mathrm{S}^2 \sim \Sigma_2$, de plus $\mathrm{S}^2=A_1\cup A_2\sim \mathrm{S}^2$, et donc  $\mathrm{S}^2 \sim  \Sigma_1\cup  \Sigma_2$
+\end{itemize}
+\end{proof}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

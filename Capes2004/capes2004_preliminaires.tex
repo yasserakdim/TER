@@ -1,0 +1,79 @@
+\section{Notations.}
+\noindent
+Dans tout ce chapitre, $\mathrm{E}$ est un espace vectoriel euclidien orienté de dimension $3$, rapporté à une base $\mathcal{B}$ orthonormée directe. Le produit scalaire de deux vecteurs $u$ et $v$ est noté $\langle u, v \rangle$. Les déplacements de $E$ sont les rotations et les translations.(c'est à dire des isométries positives)\\
+Soit $\Omega$ un ensemble quelquonque non vide. $A$ et $B$ étant deux sous-ensembles de $\Omega$, on note $A$ \textbackslash $B$
+l'intersection de $A$ et du complémentaire de $B$; en d'autres termes :
+$$A \text{\textbackslash} B = \{x \in \Omega \text{ | } x \in A \text{ et } x \notin B \}$$
+$\mathfrak{S}(\Omega)$ désigne le groupe des bijections de $\Omega$ dans lui-même.
+Soit $f \in \mathfrak{S}(\Omega)$, si $A$ est un sous-ensemble de $\Omega$, on notera $f(A)$ le sous-ensemble de $\Omega$ dont les éléments sont dans les
+images des éléments de $A$ : $$f(A) = \{ y \in \Omega \text{ | } \exists x \in A \text{ tq } f(x)=y \}$$
+\section{Préliminaires.}
+\noindent
+Avant de commencer on va rappeller quelques résultats sur les fonctions de $\mathfrak{S}(\Omega)$ qui nous seront utiles par la suite.
+\begin{lemma}\label{lemme 1}
+Soient $\Omega \ne \emptyset$, $A$ et $B$ deux sous-ensembles de $\Omega$, et $f \in \mathfrak{S}(\Omega)$, on a alors :
+\begin{enumerate}
+\item \label{1} $f(A)= \emptyset \Leftrightarrow  A=\emptyset$
+\item \label{2}$A, B \subset \Omega \Rightarrow (A \subset B \Leftrightarrow f(A) \subset f(B))$
+\item \label{3} Si $(A_i)_{i \in I}$ est une famille de sous-ensembles de $\Omega$ indexée par l'ensemble $I$, alors:
+$$ f\big(\bigcup_{i \in I} A_i \big)= \bigcup_{i \in I} f(A_i) $$
+\item \label{4} Si $(A_i)_{i \in I}$ est une famille de sous-ensembles de $\Omega$ indexée par l'ensemble $I$, alors:
+$$ f\big(\bigcap_{i \in I} A_i \big)= \bigcap_{i \in I} f(A_i) $$
+\item \label{5} $f(A \text{\textbackslash} B) = f(A) \text{\textbackslash} f(B)$
+\end{enumerate}
+
+\end{lemma}
+
+\begin{proof}[Démonstration]\label{demo1}
+\hfill
+
+\noindent
+Les trois premières affirmations sont vraies pour toutes les applications, et on les admet. Démontrons les deux dérnières affirmations :
+\begin{itemize}
+\item  Pour \ref{4}, l'implication directe est toujours vérifiée :
+  \begin{align*}
+    y \in f\big(\bigcap_{i \in I} A_i \big) &\Rightarrow \exists x \in \bigcap_{i \in I} A_i, y=f(x) \Rightarrow y \in \bigcap_{i \in I} f(A_i)
+  \end{align*}
+  Pour l'implication réciproque on a besoin de l'injectivité de $f$ :
+  \begin{align*}
+    y \in \bigcap_{i \in I} f(A_i) &\Rightarrow \forall i \in I, \exists y' \in f(A_i), y=y'
+    \Rightarrow \forall i \in I, \exists x_i \in A_i, y=f(x_i)\\
+    &\Rightarrow \forall i \in I, \exists x_i \in A_i, y=f(x_i) \text{ et } x_i = x_j \forall i,j \\
+    &\Rightarrow \exists x \in \bigcap_{i \in I}A_i, y=f(x) \Rightarrow y \in f\big(\bigcap_{i \in I}A_i\big)
+  \end{align*}
+\item  Pour \ref{5} l'inclusion réciproque est toujours vraie :
+  \begin{align*}
+    y \in f(A) \text{\textbackslash} f(B) &\Rightarrow \exists x \in A, y=f(x) \text{ et } \forall x' \in B, y \neq  f(x')\\
+      &\Rightarrow \exists x \in A \text{\textbackslash} B, y=f(x) \Rightarrow y \in f(A \text{\textbackslash} B)
+  \end{align*}
+  Pour l'inclusion directe on a besoin de l'injectivité de $f$ :
+  \begin{align*}
+    y \in f(A \text{\textbackslash} B) &\Rightarrow \exists x \in A\text{\textbackslash} B, y=f(x) \Rightarrow y \in f(A) \text{ et } \forall x' \in B, y \neq f(x') \Rightarrow  y \in f(A) \text{\textbackslash} f(B)
+  \end{align*}
+\end{itemize}
+\end{proof}
+\begin{Cor}\label{lemme 2}
+  Sous les conditions du \hyperref[lemme 1]{Lemme 1} :
+  $$(A_i)_{i \in I} \text{ est une partition de } \Omega \Leftrightarrow  (f(A_i))_{i \in I} \text{ est une partition de } \Omega$$
+\end{Cor}
+\begin{proof}[Démonstration]\label{demo2}
+  Ceci découle de \ref{1}, \ref{3} et \ref{4} :
+  \begin{align*}
+    (A_i)_{i \in I} \text{ est une partition de } \Omega  &\Leftrightarrow  \left\{
+                                                                                \begin{array}{ll}
+                                                                                    \forall i \in I, A_i \neq \emptyset \\
+                                                                                    \bigcup_{i \in I} A_i = \Omega \\
+                                                                                    \forall (i,j), i\neq j \Rightarrow A_i \cap A_j = \emptyset
+                                                                                \end{array}
+                                                                            \right. \\
+  &\Overset{\underset{f}{\Rightarrow}}{\overset{f^{-1}}{\Leftarrow}}  \left\{
+                         \begin{array}{ll}
+                             \forall i \in I, f(A_i) \neq f(\emptyset) = \emptyset \\
+                             \bigcup_{i \in I} f(A_i)=f(\bigcup_{i \in I} A_i) = f(\Omega) = \Omega  \\
+                             \forall (i,j), i\neq j \Rightarrow f(A_i \cap A_j)= f(A_i) \cap f(A_j) = \emptyset
+                         \end{array}
+                     \right.
+  \end{align*}
+\noindent
+L'implication réciproque se démontre en composant avec $f^{-1}$ $\text{qui a les mêmes propriétées que $f$}$.
+\end{proof}

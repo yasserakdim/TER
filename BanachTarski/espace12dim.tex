@@ -1,0 +1,69 @@
+\section{L'espace euclidien à 1 ou 2 dimensions .}
+\newtheorem{defff}{Définition}
+\newtheorem{TTT}{Théorème}
+\newtheorem{Coo}{Corollaire}
+\newtheorem{PRR}{Proposition}
+\newtheorem{rr}{Remarque}
+\newtheorem{lm}{Lemme}
+\noindent
+Les raisonnements de cette partie concernent l'espace euclidien à $1$ ou $2$ dimensions.
+
+\begin{TTT}
+  Soient $A$ et $B$ deux ensembles linéaires ou plans bornés et mésurables au sens de Lebesgue, et soit $\mu$ la mesure de Lebesgue. On a alors que
+  $$A \sim B \Rightarrow \mu(A) = \mu(B)$$
+\end{TTT}
+\begin{proof}
+  On admet pour l'instant (à faire), que pour tout ensemble borné $A$ d'un espace euclidien à $1$ ou $2$ dimensions, il existe un nombre réel positif $f(A)$ qui vérifie
+  \begin{enumerate}[label=(\roman*)]
+    \item Si $A \cong B$ alors $f(A) = f(B)$.
+    \item Si $A \cap B = \emptyset$ alors on a $f(A\cup B) = f(A)+f(B)$.
+    \item Si $A$ est mésurable au sens de Lebesgue alors on a que $\mu(A) = f(A)$.
+  \end{enumerate}
+  Par définition de l'équivalence par décomposition finie, il existe un $n \in \mathbb{N}^*$ et des familles d'ensembles $\left(\mathrm{A}_i\right)_{1\le i \le n}$ et $\left(\mathrm{B}_i\right)_{1\le i \le n}$ tels que :
+  \begin{center}
+  \begin{enumerate}
+    \item $\mathrm{A} = \underset{1\le i \le n}{\bigcup}\mathrm{A}_i \text{ et } \mathrm{B} = \underset{1\le i \le n}{\bigcup}\mathrm{B}_i$
+    \item $\mathrm{A}_i \cap \mathrm{A}_j = \mathrm{B}_i \cap \mathrm{B}_j = \emptyset, \forall i\neq j$
+    \item $\mathrm{A}_i \cong \mathrm{B}_i, \forall i=1, ...,n$
+  \end{enumerate}
+\end{center}
+On trouve alors par $(i)$ et $3.$ que $\forall i=1,...,n$ on a que $f(A_i) = f(B_i)$, $\forall i=1,...,n$. De plus par $2.$ et par récurrence on conclut que $$f(A) = \sum_{i=1}^n f(A_i) = \sum_{i=1}^n f(B_i) = f(B)$$
+Et puisque les ensembles $A$ et $B$ sont mésurables au sens de Lebesgue, alors d'après $(iii)$ on a que $\mu(A) = f(A)$ et $\mu(B) = f(B)$, et alors $$\mu(A) = \mu(B)$$
+\end{proof}
+\begin{rr}
+  L'implication réciproque dans le théorème n'est pas vraie dans le cas général, mais elle l'est dans le cas des polygones.
+\end{rr}
+\noindent
+Avant de démontrer l'implication réciproque pour le cas des polygones, on va énoncer un lemme qui va nous servir dans la démonstration.
+\begin{lm}
+Soit $A$ un ensemble plan qui n'est pas d'intérieur vide, et soit $B$ un ensemble somme d'un nombre fini de segments, on a alors que $$A \sim A \cup B$$
+\end{lm}
+\begin{proof}
+  \hfill
+  \begin{itemize}
+    \item   Commençant par le cas où $A$ et $B$ sont disjoints. Puisque $A$ est d'intérieur non vide, on peut trouver un disque $C$ inclu dans $A$. De plus on peut décomposer $B$ en un nombre fini de segments $$B = \bigcup_{i=1}^n B_i$$
+      tel que tous les segments sont de longueur inférieur au rayon de $C$.\\
+      Soit $k \in [1,n]$ et soit $D_1$ un segment congruent à $B_k$ et situé sur un rayon de $C$ mais ne contenant pas le centre de $C$, et soit $\alpha$ un angle qui n'est pas de la forme $r\pi$ où $r\in \mathbb{Q}$.\\
+      Par récurrence, soit $D_{n+1}$ le segment obtenu après rotation d'angle $n\alpha$ le segment $D_1$. On pose
+      $$E = \bigcup_{i=1}^\infty D_n, F =  \bigcup_{i=2}^\infty D_n\text{ et } G = A-E$$
+      On a alors que $$A = G \cup F \cup D_1 \text{ et } A \cup B_k = G \cup E \cup B_k$$
+      alors puisque $F$ s'obtient en composant $E$ par la rotation d'angle $\alpha$ alors on a que $$G \cong G, F \cong E \text{ et } B_k \cong D_1$$
+      De plus l'angle $\alpha$ n'est pas de la forme $r\pi$ où $r\in \mathbb{Q}$ donc la décomposition précédente de $A$ et $A \cup B_k$ est disjointe, on a alors que $$A \sim A \cup B_k$$
+      et donc d'après le \hyperref[pr5]{Proposition 5}, on a que $$A \sim A \cup B$$
+    \item Pour le cas général, on considère l'ensemble $A-B$ qui n'est pas d'intérieur vide, puisque $A-B$ et $B$ sont disjoints, alors par ce qui précède $$A-B \sim (A-B) \cup B = A \cup B$$
+    de plus on a que $$A-B \subset A \subset A\cup B$$
+    donc d'après le \hyperref[c2]{corollaire 3} on conclut que $$A \sim A \cup B$$
+  \end{itemize}
+
+\end{proof}
+\begin{TTT}
+  Si deux polygones $A$ et $B$ ont même aire alors on a que $A \sim B$.
+\end{TTT}
+\begin{proof}
+  Puisque les polygones $A$ et $B$ ont le même aire, alors d'après \hyperref[wbg]{le Théorème de Wallace-Bolyai-Gerwien} on peut les décomposer en un nombre fini et égale de polygones respectivement congruents sans point intérieur communs. Soient donc $A_1, ..., A_n$ et $B_1,...,B_n$ les intérieurs de ses polygones, on a alors que $$\bigcup_{i=1}^n A_i \sim \bigcup_{i=1}^n B_i$$
+  et puisque les ensemble $A - \bigcup_{i=1}^n A_i$ et $B -\bigcup_{i=1}^n B_i$ se composent d'un nombre fini de segments,  alors d'après le lemme précédent on a que $$\bigcup_{i=1}^n A_i \sim \bigcup_{i=1}^n A_i \bigcup \left(A - \bigcup_{i=1}^n A_i\right)=A \text{, et de même } \bigcup_{i=1}^n B_i \sim B$$
+  Il s'en suit que $$A \sim B$$
+\end{proof}
+\begin{Coo}
+  Deux polygones $A$ et $B$ sont équivalents par décomposition finie si et seulement si ils ont le même aire.
+\end{Coo}

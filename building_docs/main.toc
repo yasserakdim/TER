@@ -1,0 +1,21 @@
+\babel@toc {french}{}
+\contentsline {chapter}{\numberline {1}Pr\IeC {\'e}sentation du projet}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Le paradoxe de la sph\IeC {\`e}re de Hausdorff}{2}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introduction.}{2}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Notations.}{2}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Pr\IeC {\'e}liminaires.}{2}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Sch\IeC {\'e}ma de la d\IeC {\'e}monstration du paradoxe de Hausdorff.}{3}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Premi\IeC {\`e}re \IeC {\'e}tape de la d\IeC {\'e}monstration .}{4}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Deuxi\IeC {\`e}me \IeC {\'e}tape de la d\IeC {\'e}monstration .}{5}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Troisi\IeC {\`e}me \IeC {\'e}tape de la d\IeC {\'e}monstration .}{6}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Rotations d'un espace vectoriel euclidien orient\IeC {\'e} de dimention 3 .}{6}{section.2.5}%
+\contentsline {section}{\numberline {2.6}Construction d'un sous-groupe libre de rang $2$ de $\mathcal {SO}(3)$ :}{8}{section.2.6}%
+\contentsline {section}{\numberline {2.7}\IeC {\'E}tude d'un sous ensemble $\mathrm {X}$ de $\mathrm {S}^2$ sans points fixe de $\mathrm {G}$.}{13}{section.2.7}%
+\contentsline {section}{\numberline {2.8}\IeC {\'E}quid\IeC {\'e}composabilit\IeC {\'e}.}{15}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Ensembles Paradoxaux.}{18}{section.2.9}%
+\contentsline {chapter}{\numberline {3}D\IeC {\'e}composition d'ensembles de points en parties respectivement congruentes.}{20}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Propri\IeC {\'e}t\IeC {\'e}s g\IeC {\'e}n\IeC {\'e}rales de l'\IeC {\'e}quivalence par d\IeC {\'e}composition finie.}{20}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Retour \IeC {\`a} l'espace euclidien \IeC {\`a} 3 dimensions.}{24}{section.3.2}%
+\contentsline {section}{\numberline {3.3}L'espace euclidien \IeC {\`a} 1 ou 2 dimensions .}{24}{section.3.3}%
+\contentsline {part}{Annexes}{28}{part*.3}%
+\contentsline {chapter}{Annexe 1}{28}{chapter*.4}%

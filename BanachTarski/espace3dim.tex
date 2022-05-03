@@ -1,0 +1,31 @@
+\newtheorem{TT}{Théorème}
+\newtheorem{PP}{Proposition}
+
+\section{Retour à l'espace euclidien à 3 dimensions.}
+\noindent
+Les raisonnements de cette partie concernent l'espace euclidien à $3$ dimensions.
+% \subsection{Rappels :}
+On rappele le théorème de Hausdorff :
+\begin{TT}
+  \hfill
+
+  Toute sphère $\mathrm{S}$ est équidécomposable à deux copies d'elle même. En d'autres termes, si $\Sigma_1$ et $\mathrm{S}$ sont deux sphères congruentes, alors : $\mathrm{S} \sim \mathrm{S} \cup \Sigma_1$.
+\end{TT}
+
+\begin{PP}\label{pp}
+  Soit $A$ un ensemble borné d'un espace euclidien.
+  Si $A$ contient une sphère $S$ alors $A \sim S$.
+\end{PP}
+\begin{proof}
+  Puisque $A$ est borné alors on peut le décomposer : $A = \underset{1\le i \le n}{\bigcup}\mathrm{A}_i$ tel que chaque $A_i$ est inclut dans une sphère $S_i$ congruente à $S$.\\
+  Alors on a $\mathrm{S} \sim \mathrm{S} \cup \mathrm{S}_i$ pour tout $i=1,...,n$, et donc d'après la \hyperref[pr5]{proposition 5}, $\mathrm{S} \sim \mathrm{S} \cup \left(\underset{1\le i \le n}{\cup}\mathrm{S}_i\right)$.\\
+  Et puisque $S \subset A \subset S \cup \left(\underset{1\le i \le n}{\cup}\mathrm{S}_i\right)$, alors d'après le \hyperref[c2]{corollaire 3}, on conclut que $A \sim S$.
+\end{proof}
+\begin{TT}
+  Soient $A$ et $B$ deux ensembles bornés quelconques d'intérieurs non vides, situés dans un espace euclidien de dimension 3, alors $A \sim B$.
+\end{TT}
+\begin{proof}
+  Soient $S_1 \subset A$ et $S_2 \subset B$, tels que $S_1 \sim S_2$, (on peut trouver de telles sphères puisque $A$ et $B$ sont d'intérieurs non vides). Alors d'après la \hyperref[pp]{proposition 1}, $S_1 \sim A$ et $B \sim S_2$, et donc puisque $\sim$ est une relation d'équivalence on conclut directement que $\mathrm{A} \sim \mathrm{B}$.
+\end{proof}
+
+\input{BanachTarski/espace12dim.tex}
