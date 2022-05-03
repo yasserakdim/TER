@@ -333,8 +333,8 @@ INPUT ./building_docs/main.out
 INPUT ./building_docs/main.out
 INPUT ./building_docs/main.out
 OUTPUT ./building_docs/main.out
-INPUT ./title.tex
-INPUT ./title.tex
+INPUT ./Title & Presentation & abstract/title.tex
+INPUT ./Title & Presentation & abstract/title.tex
 INPUT ./images/UFR_IM2AG_2020.jpg
 INPUT ./images/UFR_IM2AG_2020.jpg
 INPUT ./images/UFR_IM2AG_2020.jpg
@@ -358,8 +358,8 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
-INPUT ./abstract.tex
-INPUT ./abstract.tex
+INPUT ./Title & Presentation & abstract/abstract.tex
+INPUT ./Title & Presentation & abstract/abstract.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1440.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm2488.tfm
@@ -369,8 +369,8 @@ INPUT ./building_docs/main.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1000.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecbx1200.tfm
 OUTPUT ./building_docs/main.toc
-INPUT ./presentation.tex
-INPUT ./presentation.tex
+INPUT ./Title & Presentation & abstract/presentation.tex
+INPUT ./Title & Presentation & abstract/presentation.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-32.def
 INPUT Capes2004/Capes2004.tex
@@ -421,10 +421,10 @@ INPUT BanachTarski/espace3dim.tex
 INPUT BanachTarski/espace3dim.tex
 INPUT BanachTarski/espace12dim.tex
 INPUT BanachTarski/espace12dim.tex
-INPUT ./annexes.tex
-INPUT ./annexes.tex
-INPUT ./annexe1.tex
-INPUT ./annexe1.tex
+INPUT ./annexes/annexes.tex
+INPUT ./annexes/annexes.tex
+INPUT ./annexes/annexe1.tex
+INPUT ./annexes/annexe1.tex
 INPUT images/x5.png
 INPUT ./images/x5.png
 INPUT ./images/x5.png
@@ -443,15 +443,9 @@ INPUT ./images/x3.png
 INPUT images/x4.png
 INPUT ./images/x4.png
 INPUT ./images/x4.png
-INPUT ./building_docs/main.bbl
-INPUT ./building_docs/main.bbl
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm
 INPUT ./building_docs/main.aux
 INPUT ./building_docs/main.out
 INPUT ./building_docs/main.out
-INPUT /home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk
 INPUT /home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk
 INPUT /home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk
 INPUT /home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk
