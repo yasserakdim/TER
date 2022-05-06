@@ -24,9 +24,20 @@ UNIVERSALIS.
 \newblock
   \url{https://www.universalis.fr/encyclopedie/stefan-banach/3-le-probleme-de-la-mesure-universelle/}.
 
+\bibitem{cite5}
+Wikipedia.
+\newblock Axiome du choix.
+\newblock \url{https://fr.wikipedia.org/wiki/Axiome_du_choix}.
+
 \bibitem{cite2}
 Wikipedia.
 \newblock Banach–tarski paradox.
 \newblock \url{https://en.wikipedia.org/wiki/Banach%E2%80%93Tarski_paradox}.
+
+\bibitem{cite6}
+Wikipedia.
+\newblock Théorème de wallace-bolyai-gerwien.
+\newblock
+  \url{https://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Wallace-Bolyai-Gerwien}.
 
 \end{thebibliography}

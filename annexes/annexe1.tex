@@ -1,6 +1,7 @@
 \chapter*{Annexe 1}
 \addcontentsline{toc}{chapter}{Annexe 1}
 \newtheorem{kkk}{Théorème}
+\newtheorem{li}{Lemme}
 
 %changer le format des sections, subsections pour apparaittre sans le num de chapitre
 \makeatletter
@@ -9,8 +10,8 @@
 
 %recommencer la numérotation des section à "1"
 \setcounter{section}{0}
-
-\begin{kkk}(Axiome du choix)
+Les théorème présentés dans cette annexe servent à démontrer d'autres théorèmes dans les chapitres précedents; l'axiome du choix va nous servir à démontrer le paradoxe de Hausdorff, et le théorème de Wallace-Bolyai-Gerwien à démontrer le théorème de Banach-Schröder-Bernstein.
+\begin{kkk}(Axiome du choix)\cite{cite5}
   \hfill
 
 \noindent
@@ -18,69 +19,184 @@
   \label{axiome}
 \end{kkk}
 
-\begin{kkk}(Théorème de Wallace-Bolyai-Gerwien)\label{wbg}
+\begin{kkk}(Théorème de Wallace-Bolyai-Gerwien)\label{wbg}\cite{cite6}
   \hfill
 
 \noindent
 Pour que deux polygones du plan aient la même aire, il faut et il suffit qu'ils soient équivalents par découpage fini.
 \end{kkk}
+\noindent
+On va proposer une démonstration algorithmique de ce théorème, on a tout d'abord besoin de quelques lemmes
+\begin{li}
+Tout polygone peut être scindé en un nombre fini de triangles.
+\end{li}
 \begin{proof}
   \hfill
-  \begin{itemize}
-    \item On commence par découper le premier polygone en triangles. Considérons le sommet le plus à gauche du polygone, $P_3$ sur la figure suivante, et le segment formé des deux sommets voisins $P_2$ et $P_4$, si ce dernier est inclu dans le polygone alors Le triangle $P_2P_3P_4$ peut être ajouté à la liste des triangles qui composent le polygone. Le sommet $P_3$ est enlevé du polygone, et on applique récursivement la triangulation au polygone restant $P_0P_1P_2P_4P_5P_6$.
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.6]{images/x5.png}
 
-        % \caption{Une représentation graphique d'un groupe libre de rang 2}
-    \end{figure}
+  \noindent
+  Considérons le sommet le plus à gauche du polygone, $P_3$ sur la figure suivante, et le segment formé des deux sommets voisins $P_2$ et $P_4$, si ce dernier est inclu dans le polygone alors Le triangle $P_2P_3P_4$ peut être ajouté à la liste des triangles qui composent le polygone. Le sommet $P_3$ est enlevé du polygone, et on applique récursivement la triangulation au polygone restant $P_0P_1P_2P_4P_5P_6$.
+  \begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.6]{images/x5.png}
 
-    sinon si le segment formé des deux sommets voisins n'est pas à l'intérieur du polygone, il existe nécessairement un ou plusieurs sommets à
-l'intérieur du triangle $P_2P_3P_4$. Soit $P_j$ le sommet situé dans le triangle $P_2P_3P_4$ le plus loin de $P_2P_4$. Le segment $P_3P_j$ est à l'intérieur du polygone, car si un côté coupait ce segment, il aurait une extrémité dans le triangle $P_2P_3P_4$, plus éloigné de $P_2P_4$ que $P_j$.\\ La diagonale $P_3P_j$ permet de diviser le polygone initial en deux polygones. On applique récursivement la diagonalisation à ces deux polygones.
+      % \caption{Une représentation graphique d'un groupe libre de rang 2}
+  \end{figure}
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.6]{images/x6.png}
+\noindent
+sinon si le segment formé des deux sommets voisins n'est pas à l'intérieur du polygone, il existe nécessairement un ou plusieurs sommets à
+l'intérieur du triangle $P_2P_3P_4$. Soit $P_j$ le sommet situé dans le triangle $P_2P_3P_4$ le plus loin de $P_2P_4$. Le segment $P_3P_j$ est à l'intérieur du polygone, car si un côté coupait ce segment, il aurait une extrémité dans le triangle $P_2P_3P_4$, plus éloigné de $P_2P_4$ que $P_j$.
+\newpage
+La diagonale $P_3P_j$ permet de diviser le polygone initial en deux polygones. On applique récursivement la diagonalisation à ces deux polygones.
 
-        % \caption{Une représentation graphique d'un groupe libre de rang 2}
-    \end{figure}
-    \newpage
-    \item Après, on transforme chaque triangle en un rectangle (ce découpage s'applique à tout triangle, car dans tout triangle au moins l'une des hauteurs coupe le côté opposé)
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.6]{images/x1.png}
+  \begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.6]{images/x6.png}
 
-        % \caption{Une représentation graphique d'un groupe libre de rang 2}
-    \end{figure}
-    \item Si le rectangle a une longueur supérieur à quatre fois sa largeur on le découpe en deux (en longueur) et on le réarange de la manière suivante
+      % \caption{Une représentation graphique d'un groupe libre de rang 2}
+  \end{figure}
+\end{proof}
+\begin{li}
+  Tout triangle peut être décomposé en un nombre fini de parties pour former un rectangle.
+\end{li}
+\begin{proof}
+  \hfill
 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.6]{images/x2.png}
+  \noindent
+  Soit $ABC$ un triangle, et supposons que la droite passante par $B$ et perpendiculaire à la droite $(AC)$ coupe cette dernière en un point intérieur au segment $[AC]$. Soit donc $D$ le milieu du segment $[AB]$, et soit $E$ l'intersection de la droite passante par $D$ et parallèle à $(AC)$, et soit $F$ la projection de $B$ sur $(DE)$.
 
-        % \caption{Une représentation graphique d'un groupe libre de rang 2}
-    \end{figure}
+  \begin{figure}[h]
+          \centering
+          \includegraphics[scale=0.6]{images/xx1.png}
 
-    et on répète cette opération jusqu'à obtenir un rectangle dont la longueur est inférieur à quatre fois sa largeur.
-    \item On transforme chaque rectangle en carré de la manière suivante
-    \newpage
-
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.6]{images/x3.png}
-
-        % \caption{Une représentation graphique d'un groupe libre de rang 2}
-    \end{figure}
-
-    ceci est possible si et seulement si $\sqrt{ab} \ge b-\sqrt{ab}$ c'est à dire si et seulement si $b \le 4a$.
-    \item On fusionne les carrés, deux par deux, progressivement, jusqu'à avoir un unique grand carré de la manière suivante
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.6]{images/x4.png}
-
-        % \caption{Une représentation graphique d'un groupe libre de rang 2}
-    \end{figure}
-    \item On refait la même chose pour le deuxième polygone et on superpose les découpages intervenus pour transformer le polygone 1 en carré à ceux obtenus pour transformer le polygone 2 en carré. Par construction, les pièces résultantes permettent de reconstituer le polygone 1 et le polygone 2.
-  \end{itemize}
+          % \caption{Une représentation graphique d'un groupe libre de rang 2}
+      \end{figure}
+\noindent
+  Pour faire la décomposition ci-dessus il faut que  $BE = EC$, et $DE+DF+FE=2DE = AC$, et ceci est une conséquence directe de théorème de Thalès.
 
 \end{proof}
+\begin{li}
+  Tout rectangle peut être transformé en un autre dont la longueur est inférieur à quatre fois sa largeur.
+\end{li}
+\newpage
+\begin{proof}
+  \hfill
+
+  \noindent
+  Si le rectangle a une longueur supérieur à quatre fois sa largeur on le découpe en deux (en longueur) et on le réarange de la manière suivante
+  %
+      \begin{figure}[h]
+          \centering
+          \includegraphics[scale=0.6]{images/x2.png}
+
+          % \caption{Une représentation graphique d'un groupe libre de rang 2}
+      \end{figure}
+
+  \noindent
+  et on répète cette opération jusqu'à obtenir un rectangle dont la longueur est inférieur à quatre fois sa largeur.
+\end{proof}
+\begin{li}
+  Tout rectangle dont la longueur est inférieur à quatre fois sa largeur peut être décomposé en un caré.
+\end{li}
+\begin{proof}
+Soit $ABCD$ un rectangle et soient $a=BC$ et $b=AB$, et soit $E$ le point du segment $[AB]$ tel que $AE = b-\sqrt{ab}$, et soit $F$ le point du segment $[CD]$ tel que $DF = \sqrt{ab}$, la perpendiculaire à $(CD)$ coupe $[CE]$ si et seulement si $\sqrt{ab} \ge b-\sqrt{ab}$ c'est à dire si et seulement si $b \le 4a$, notant $G$ cette intersection.
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.6]{images/xx3.png}
+
+    % \caption{Une représentation graphique d'un groupe libre de rang 2}
+\end{figure}
+
+Pour pouvoir faire la décomposition ci-dessus, il faut que $FG +AD = \sqrt{ab}$. D'après le théorème de Thalès, $\frac{FG}{BC} = \frac{FC}{EB}$
+c.à.d $FG = BC\frac{FC}{EB} = \frac{a(b-\sqrt{ab})}{\sqrt{ab}}$, et donc $FG +AD = \frac{a(b-\sqrt{ab})}{\sqrt{ab}} +a = \sqrt{ab}$
+\end{proof}
+\begin{li}
+  Deux carrés peuvent être décomposé en un seul carré.
+\end{li}
+\begin{proof}
+  \hfill
+
+  \noindent
+  Soit $ABCD$ et $EFGH$ deux carrés, et on suppose que la surface de $EFGH$ est inférieur à celle de $ABCD$.
+  \newpage
+  \begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.6]{images/xx4.png}
+
+      % \caption{Une représentation graphique d'un groupe libre de rang 2}
+  \end{figure}
+
+\noindent
+$J$ est le point de $[BC]$ qui rend $AJG$ un triangle rectangle et aussi isocèle. l est clais que les angles du polygone obtenu par la décomposition ci-dessus sont droits, de plus par construction il a deux cotés adjacents égaux, donc c'est un carré.
+\end{proof}
+\begin{proof}[Démonstration du Théorème de Wallace-Bolyai-Gerwien]
+  \hfill
+  \begin{itemize}
+    \item On décompose le premier polygone en un nombre fini de triangles.
+    \item On transforme chaque triangle en un rectangle dont la longueur est inférieur à 4 fois la largeur.
+    \item On transforme chaque rectangle en un carré.
+    \item On fusionne les carrés, deux par deux, progressivement, jusqu'à avoir un unique grand carré.
+    \item On refait la même chose pour le deuxième polygone et on superpose les découpages intervenus pour transformer le polygone 1 en carré à ceux obtenus pour transformer le polygone 2 en carré. Par construction, les pièces résultantes permettent de reconstituer le polygone 1 et le polygone 2.
+
+
+  \end{itemize}
+\end{proof}
+% \begin{proof}
+%   \hfill
+%   \begin{itemize}
+%     \item On commence par découper le premier polygone en triangles. Considérons le sommet le plus à gauche du polygone, $P_3$ sur la figure suivante, et le segment formé des deux sommets voisins $P_2$ et $P_4$, si ce dernier est inclu dans le polygone alors Le triangle $P_2P_3P_4$ peut être ajouté à la liste des triangles qui composent le polygone. Le sommet $P_3$ est enlevé du polygone, et on applique récursivement la triangulation au polygone restant $P_0P_1P_2P_4P_5P_6$.
+%     \begin{figure}[h]
+%         \centering
+%         \includegraphics[scale=0.6]{images/x5.png}
+%
+%         % \caption{Une représentation graphique d'un groupe libre de rang 2}
+%     \end{figure}
+%
+%     sinon si le segment formé des deux sommets voisins n'est pas à l'intérieur du polygone, il existe nécessairement un ou plusieurs sommets à
+% l'intérieur du triangle $P_2P_3P_4$. Soit $P_j$ le sommet situé dans le triangle $P_2P_3P_4$ le plus loin de $P_2P_4$. Le segment $P_3P_j$ est à l'intérieur du polygone, car si un côté coupait ce segment, il aurait une extrémité dans le triangle $P_2P_3P_4$, plus éloigné de $P_2P_4$ que $P_j$.\\ La diagonale $P_3P_j$ permet de diviser le polygone initial en deux polygones. On applique récursivement la diagonalisation à ces deux polygones.
+%
+%     \begin{figure}[h]
+%         \centering
+%         \includegraphics[scale=0.6]{images/x6.png}
+%
+%         % \caption{Une représentation graphique d'un groupe libre de rang 2}
+%     \end{figure}
+%     \newpage
+%     \item Après, on transforme chaque triangle en un rectangle (ce découpage s'applique à tout triangle, car dans tout triangle au moins l'une des hauteurs coupe le côté opposé)
+%     \begin{figure}[h]
+%         \centering
+%         \includegraphics[scale=0.6]{images/x1.png}
+%
+%         % \caption{Une représentation graphique d'un groupe libre de rang 2}
+%     \end{figure}
+%     \item Si le rectangle a une longueur supérieur à quatre fois sa largeur on le découpe en deux (en longueur) et on le réarange de la manière suivante
+%
+%     \begin{figure}[h]
+%         \centering
+%         \includegraphics[scale=0.6]{images/x2.png}
+%
+%         % \caption{Une représentation graphique d'un groupe libre de rang 2}
+%     \end{figure}
+%
+%     et on répète cette opération jusqu'à obtenir un rectangle dont la longueur est inférieur à quatre fois sa largeur.
+%     \item On transforme chaque rectangle en carré de la manière suivante
+%     \newpage
+%
+%     \begin{figure}[h]
+%         \centering
+%         \includegraphics[scale=0.6]{images/x3.png}
+%
+%         % \caption{Une représentation graphique d'un groupe libre de rang 2}
+%     \end{figure}
+%
+%     ceci est possible si et seulement si $\sqrt{ab} \ge b-\sqrt{ab}$ c'est à dire si et seulement si $b \le 4a$.
+%     \item On fusionne les carrés, deux par deux, progressivement, jusqu'à avoir un unique grand carré de la manière suivante
+%     \begin{figure}[h]
+%         \centering
+%         \includegraphics[scale=0.6]{images/x4.png}
+%
+%         % \caption{Une représentation graphique d'un groupe libre de rang 2}
+%     \end{figure}
+%     \item On refait la même chose pour le deuxième polygone et on superpose les découpages intervenus pour transformer le polygone 1 en carré à ceux obtenus pour transformer le polygone 2 en carré. Par construction, les pièces résultantes permettent de reconstituer le polygone 1 et le polygone 2.
+%   \end{itemize}
+%
+% \end{proof}
