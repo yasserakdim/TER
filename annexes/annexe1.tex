@@ -45,7 +45,7 @@ Tout polygone peut être scindé en un nombre fini de triangles.
 
 \noindent
 sinon si le segment formé des deux sommets voisins n'est pas inclu dans polygone, il existe nécessairement un ou plusieurs sommets à
-l'intérieur du triangle formé par ces sommets ($P_2P_3P_4$ sur la figure suivante) puisque ce segment va couper nécessairement l'intérieur d'un autre segment $[P_kP_l]$ et donc le somment le plus à gauche entre $P_k$ et $P_l$ va être à l'intérieur du triangle. Soit $P_j$ le sommet situé dans le triangle $P_2P_3P_4$ le plus loin de $P_2P_4$. Le segment $P_3P_j$ est à l'intérieur du polygone, car si un côté coupait ce segment, il aurait une extrémité dans le triangle $P_2P_3P_4$, plus éloigné de $P_2P_4$ que $P_j$.
+l'intérieur du triangle formé par ces sommets ($P_2P_3P_4$ sur la figure suivante) puisque ce segment va couper nécessairement l'intérieur d'un autre segment $[P_kP_l]$ et donc le sommet le plus à gauche entre $P_k$ et $P_l$ va être à l'intérieur du triangle. Soit $P_j$ le sommet situé dans le triangle $P_2P_3P_4$ le plus loin de $P_2P_4$. Le segment $P_3P_j$ est à l'intérieur du polygone, car si un côté coupait ce segment, il aurait une extrémité dans le triangle $P_2P_3P_4$, plus éloigné de $P_2P_4$ que $P_j$.
 % \newpage
 La diagonale $P_3P_j$ permet de diviser le polygone initial en deux polygones le premier contien $P_3$, $P_2$ et $P_j$ et le deuxième contient $P_3$, $P_4$ et $P_j$ donc les deux polygones obtenus ont un nombre de sommets $\le n$. On applique récursivement la triangulation à ces deux polygones.
 
