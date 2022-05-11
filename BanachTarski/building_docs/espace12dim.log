@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.23)  3 MAY 2022 23:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.23)  11 MAY 2022 11:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -185,19 +185,19 @@ Overfull \hbox (5.00002pt too wide) in paragraph at lines 1--10
  []
 
 
-./espace12dim.tex:12: LaTeX Error: Missing \begin{document}.
+./espace12dim.tex:11: LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.12   S
-        oient $A$ et $B$ deux ensembles linéaires ou plans bornés et mésu...
+l.11 \begin{TTT}\label
+                      {pr}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 12--12
+Overfull \hbox (20.0pt too wide) in paragraph at lines 11--11
 [] 
  []
 
@@ -376,27 +376,6 @@ Missing character: There is no d in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no o in font nullfont!
-Missing character: There is no u in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no l in font nullfont!
-Missing character: There is no ' in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no s in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no ( in font nullfont!
-Missing character: There is no f in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no ) in font nullfont!
-Missing character: There is no , in font nullfont!
 Missing character: There is no q in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -488,13 +467,8 @@ Missing character: There is no f in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
 
-Overfull \hbox (5.00002pt too wide) in paragraph at lines 16--17
-    \/cmr/m/n/10 ^^Ra
- []
-
-
 Overfull \hbox (4.44444pt too wide) in paragraph at lines 16--17
-\/cmr/m/n/10 ^^Se
+      \/cmr/m/n/10 ^^Se
  []
 
 
@@ -1414,7 +1388,20 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+./espace12dim.tex:35: Undefined control sequence.
+<write> \newlabel{pr}{{1}{\thepage 
+                                   }}
+l.35 \end{rr}
+             
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+\newlabel{pr}{{1}{}}
+]
 Missing character: There is no A in font nullfont!
 Missing character: There is no v in font nullfont!
 Missing character: There is no a in font nullfont!
@@ -2043,10 +2030,8 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no , in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no s in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no S in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no t in font nullfont!
@@ -3021,6 +3006,26 @@ Missing character: There is no w in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no n in font nullfont!
+Missing character: There is no ( in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no ' in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no x in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no ) in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -3145,7 +3150,7 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no d in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no s in font nullfont!
+Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no p in font nullfont!
@@ -3192,6 +3197,11 @@ Overfull \hbox (4.44444pt too wide) in paragraph at lines 63--63
 
 Overfull \hbox (8.88889pt too wide) in paragraph at lines 63--63
 \/cmr/m/n/10 ^^Se^^Re
+ []
+
+
+Overfull \hbox (8.88889pt too wide) in paragraph at lines 63--63
+\/cmr/m/n/10 ^^Se^^Se
  []
 
 
@@ -3421,11 +3431,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no q in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no e in font nullfont!
-
-Overfull \hbox (28.92004pt too wide) detected at line 65
-\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 ^^X \OML/cmm/m/it/10 B
- []
-
+Missing character: There is no . in font nullfont!
 
 ./espace12dim.tex:66: LaTeX Error: \begin{document} ended by \end{proof}.
 
@@ -3438,6 +3444,16 @@ l.66 \end{proof}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
+
+
+Overfull \hbox (18.05553pt too wide) in paragraph at lines 64--68
+    $\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 ^^X
+ []
+
+
+Overfull \hbox (8.0868pt too wide) in paragraph at lines 64--68
+\OML/cmm/m/it/10 B$ 
+ []
 
 
 Overfull \hbox (59.30525pt too wide) in paragraph at lines 68--69
@@ -3563,5 +3579,5 @@ Here is how much of TeX's memory you used:
  15205 multiletter control sequences out of 15000+600000
  532992 words of font info for 26 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 19i,8n,17p,434b,143s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 19i,8n,17p,461b,143s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

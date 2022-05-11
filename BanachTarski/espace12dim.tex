@@ -8,12 +8,12 @@
 \noindent
 Les raisonnements de cette partie concernent l'espace euclidien à $1$ ou $2$ dimensions.
 
-\begin{TTT}
+\begin{TTT}\label{pr}
   Soient $A$ et $B$ deux ensembles linéaires ou plans bornés et mésurables au sens de Lebesgue, et soit $\mu$ la mesure de Lebesgue. On a alors que
   $$A \sim B \Rightarrow \mu(A) = \mu(B)$$
 \end{TTT}
 \begin{proof}
-  On admet pour l'instant (à faire), que pour tout ensemble borné $A$ d'un espace euclidien à $1$ ou $2$ dimensions, il existe un nombre réel positif $f(A)$ qui vérifie
+  On admet que pour tout ensemble borné $A$ d'un espace euclidien à $1$ ou $2$ dimensions, il existe un nombre réel positif $f(A)$ qui vérifie
   \begin{enumerate}[label=(\roman*)]
     \item Si $A \cong B$ alors $f(A) = f(B)$.
     \item Si $A \cap B = \emptyset$ alors on a $f(A\cup B) = f(A)+f(B)$.
@@ -43,7 +43,7 @@ Soit $A$ un ensemble plan qui n'est pas d'intérieur vide, et soit $B$ un ensemb
   \begin{itemize}
     \item   Commençant par le cas où $A$ et $B$ sont disjoints. Puisque $A$ est d'intérieur non vide, on peut trouver un disque $C$ inclu dans $A$. De plus on peut décomposer $B$ en un nombre fini de segments $$B = \bigcup_{i=1}^n B_i$$
       tel que tous les segments sont de longueur inférieur au rayon de $C$.\\
-      Soit $k \in [1,n]$ et soit $D_1$ un segment congruent à $B_k$ et situé sur un rayon de $C$ mais ne contenant pas le centre de $C$, et soit $\alpha$ un angle qui n'est pas de la forme $r\pi$ où $r\in \mathbb{Q}$.\\
+      Soit $k \in [1,n]$ et soit $D_1$ un segment congruent à $B_k$ et situé sur un rayon de $C$ mais ne contenant pas le centre de $C$. Soit $\alpha$ un angle qui n'est pas de la forme $r\pi$ où $r\in \mathbb{Q}$.\\
       Par récurrence, soit $D_{n+1}$ le segment obtenu après rotation d'angle $n\alpha$ le segment $D_1$. On pose
       $$E = \bigcup_{i=1}^\infty D_n, F =  \bigcup_{i=2}^\infty D_n\text{ et } G = A-E$$
       On a alors que $$A = G \cup F \cup D_1 \text{ et } A \cup B_k = G \cup E \cup B_k$$
@@ -60,9 +60,9 @@ Soit $A$ un ensemble plan qui n'est pas d'intérieur vide, et soit $B$ un ensemb
   Si deux polygones $A$ et $B$ ont même aire alors on a que $A \sim B$.
 \end{TTT}
 \begin{proof}
-  Puisque les polygones $A$ et $B$ ont le même aire, alors d'après \hyperref[wbg]{le Théorème de Wallace-Bolyai-Gerwien} on peut les décomposer en un nombre fini et égale de polygones respectivement congruents sans point intérieur communs. Soient donc $A_1, ..., A_n$ et $B_1,...,B_n$ les intérieurs de ses polygones, on a alors que $$\bigcup_{i=1}^n A_i \sim \bigcup_{i=1}^n B_i$$
+  Puisque les polygones $A$ et $B$ ont le même aire, alors d'après \hyperref[wbg]{le Théorème de Wallace-Bolyai-Gerwien} (démontré dans l'annexe) on peut les décomposer en un nombre fini et égale de polygones respectivement congruents sans point intérieur communs. Soient donc $A_1, ..., A_n$ et $B_1,...,B_n$ les intérieurs de ces polygones, on a alors que $$\bigcup_{i=1}^n A_i \sim \bigcup_{i=1}^n B_i$$
   et puisque les ensemble $A - \bigcup_{i=1}^n A_i$ et $B -\bigcup_{i=1}^n B_i$ se composent d'un nombre fini de segments,  alors d'après le lemme précédent on a que $$\bigcup_{i=1}^n A_i \sim \bigcup_{i=1}^n A_i \bigcup \left(A - \bigcup_{i=1}^n A_i\right)=A \text{, et de même } \bigcup_{i=1}^n B_i \sim B$$
-  Il s'en suit que $$A \sim B$$
+  Il s'en suit que $A \sim B$.
 \end{proof}
 \begin{Coo}
   Deux polygones $A$ et $B$ sont équivalents par décomposition finie si et seulement si ils ont le même aire.

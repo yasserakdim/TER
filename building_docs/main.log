@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.23)  6 MAY 2022 10:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.7.23)  11 MAY 2022 14:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -962,40 +962,40 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--56
 ] (./annexes/annexe1.tex
 \c@kkk=\count353
 \c@li=\count354
-<images/x5.png, id=442, 461.725pt x 271.0125pt>
+<images/x5.png, id=443, 461.725pt x 271.0125pt>
 File: images/x5.png Graphic file (type png)
 <use images/x5.png>
-Package pdftex.def Info: images/x5.png  used on input line 40.
+Package pdftex.def Info: images/x5.png  used on input line 41.
 (pdftex.def)             Requested size: 277.03714pt x 162.60875pt.
  [28
 
  <./images/x5.png>]
-<images/x6.png, id=452, 452.69125pt x 329.23pt>
+<images/x6.png, id=453, 452.69125pt x 329.23pt>
 File: images/x6.png Graphic file (type png)
 <use images/x6.png>
-Package pdftex.def Info: images/x6.png  used on input line 53.
+Package pdftex.def Info: images/x6.png  used on input line 54.
 (pdftex.def)             Requested size: 271.61684pt x 197.53952pt.
-<images/xx1.png, id=453, 684.5575pt x 192.72pt>
+<images/xx1.png, id=454, 684.5575pt x 192.72pt>
 File: images/xx1.png Graphic file (type png)
 <use images/xx1.png>
-Package pdftex.def Info: images/xx1.png  used on input line 69.
+Package pdftex.def Info: images/xx1.png  used on input line 70.
 (pdftex.def)             Requested size: 410.73766pt x 115.63287pt.
  [29 <./images/x6.png> <./images/xx1.png>]
-<images/x2.png, id=465, 666.49pt x 183.68625pt>
+<images/x2.png, id=466, 666.49pt x 183.68625pt>
 File: images/x2.png Graphic file (type png)
 <use images/x2.png>
-Package pdftex.def Info: images/x2.png  used on input line 89.
+Package pdftex.def Info: images/x2.png  used on input line 90.
 (pdftex.def)             Requested size: 399.89708pt x 110.21259pt.
-<images/xx3.png, id=466, 660.4675pt x 261.97874pt>
+<images/xx3.png, id=467, 660.4675pt x 261.97874pt>
 File: images/xx3.png Graphic file (type png)
 <use images/xx3.png>
-Package pdftex.def Info: images/xx3.png  used on input line 104.
+Package pdftex.def Info: images/xx3.png  used on input line 105.
 (pdftex.def)             Requested size: 396.28355pt x 157.18845pt.
  [30 <./images/x2.png> <./images/xx3.png>]
-<images/xx4.png, id=477, 663.47874pt x 329.23pt>
+<images/xx4.png, id=478, 663.47874pt x 329.23pt>
 File: images/xx4.png Graphic file (type png)
 <use images/xx4.png>
-Package pdftex.def Info: images/xx4.png  used on input line 123.
+Package pdftex.def Info: images/xx4.png  used on input line 124.
 (pdftex.def)             Requested size: 398.0903pt x 197.53952pt.
 )) [31 <./images/xx4.png>] (./building_docs/main.bbl
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 6.
@@ -1019,19 +1019,19 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 126.
  ) 
 Here is how much of TeX's memory you used:
- 33512 strings out of 483154
- 761825 string characters out of 5965023
+ 33513 strings out of 483154
+ 761829 string characters out of 5965023
  1154339 words of memory out of 5000000
- 47695 multiletter control sequences out of 15000+600000
+ 47696 multiletter control sequences out of 15000+600000
  550859 words of font info for 62 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,19n,136p,906b,946s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1000.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1000.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/eccc1200.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk> </home/ensimag/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/euler/eufm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on ./building_docs/main.pdf (34 pages, 570718 bytes).
+Output written on ./building_docs/main.pdf (34 pages, 572989 bytes).
 PDF statistics:
- 1025 PDF objects out of 1200 (max. 8388607)
- 526 compressed objects within 6 object streams
+ 1026 PDF objects out of 1200 (max. 8388607)
+ 527 compressed objects within 6 object streams
  163 named destinations out of 1000 (max. 500000)
  325 words of extra memory for PDF output out of 10000 (max. 10000000)
 
